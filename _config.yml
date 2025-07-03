@@ -3,22 +3,23 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: Guozhen
-middle_name: 
-last_name: Zhu
+first_name: You
+middle_name: R.
+last_name: Name
 contact_note: >
-  Feel free to reach out for discussions and collaborations!
+  You can even add a little note about which of these is the best way to reach you.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Principal Scientist at Origin Wireless AI, working on wireless sensing, artificial intelligence, and signal processing. Ph.D. in Electrical Engineering from University of Maryland, College Park.
+  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: wireless-sensing, artificial-intelligence, signal-processing, IoT, localization, SLAM, electrical-engineering # add your own keywords or leave empty
+  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🔬 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://guozhen-jenn-zhu.github.io # the base hostname & protocol for your site
-baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
+url: https://alshedivat.github.io # the base hostname & protocol for your site
+baseurl: /al-folio # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
@@ -50,7 +51,7 @@ footer_fixed: true
 search_enabled: true
 socials_in_search: true
 posts_in_search: true
-bib_search: false # disabled for GitHub Pages compatibility
+bib_search: true
 
 # Dimensions
 max_width: 930px
@@ -85,14 +86,14 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Guozhen Zhu # blog_name will be displayed in your blog page
-blog_description: Wireless sensing, AI, and signal processing research
+blog_name: al-folio # blog_name will be displayed in your blog page
+blog_description: a simple whitespace theme for academics
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
-# Pagination (GitHub Pages compatible)
-paginate: 5
-paginate_path: "/blog/page:num/"
+# Pagination
+pagination:
+  enabled: true
 
 related_blog_posts:
   enabled: true
@@ -194,14 +195,24 @@ keep_files:
   - CNAME
   - .nojekyll
 
-# Plug-ins (GitHub Pages compatible only)
+# Plug-ins
 plugins:
+  - jekyll-archives-v2
+  - jekyll-email-protect
   - jekyll-feed
+  - jekyll-get-json
+  - jekyll-imagemagick
+  - jekyll-jupyter-notebook
+  - jekyll-link-attributes
+  - jekyll-minifier
+  - jekyll-paginate-v2
+  - jekyll-regex-replace
+  - jekyll/scholar
   - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-gist
-  - jekyll-github-metadata
-  - jekyll-seo-tag
+  - jekyll-tabs
+  - jekyll-terser
+  - jekyll-toc
+  - jekyll-twitter-plugin
   - jemoji
 
 # Sitemap settings
@@ -251,24 +262,72 @@ display_categories: ["external-services"] # these categories will be displayed o
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
 
-# Note: Jekyll Scholar plugin is not supported by GitHub Pages
-# Commenting out scholar configuration to prevent build errors
-# scholar:
-#   last_name: [Zhu]
-#   first_name: [Guozhen, G.]
-#   style: apa
-#   locale: en
-#   source: /_bibliography/
-#   bibliography: papers.bib
+scholar:
+  last_name: [Einstein]
+  first_name: [Albert, A.]
 
-# Publication badges disabled for GitHub Pages compatibility
-# enable_publication_badges:
-#   altmetric: false
-#   dimensions: false
-#   google_scholar: false
-#   inspirehep: false
+  style: apa
+  locale: en
 
-# enable_publication_thumbnails: false
+  source: /_bibliography/
+  bibliography: papers.bib
+  bibliography_template: bib
+  # Note: if you have latex math in your bibtex, the latex filter
+  # preprocessing may conflict with MathJAX if the latter is enabled.
+  # See https://github.com/alshedivat/al-folio/issues/357.
+  bibtex_filters: [latex, smallcaps, superscript]
+
+  replace_strings: true
+  join_strings: true
+
+  details_dir: bibliography
+  details_link: Details
+
+  query: "@*"
+  group_by: year
+  group_order: descending
+
+# Display different badges withs stats for your publications
+# Customize badge behavior in _layouts/bib.liquid
+enable_publication_badges:
+  altmetric: true # Altmetric badge (Customization options: https://badge-docs.altmetric.com/index.html)
+  dimensions: true # Dimensions badge (Customization options: https://badge.dimensions.ai/)
+  google_scholar: true # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
+  inspirehep: true # Inspire HEP badge (https://help.inspirehep.net/knowledge-base/citation-metrics/)
+
+# Filter out certain bibtex entry keywords used internally from the bib output
+filtered_bibtex_keywords:
+  [
+    abbr,
+    abstract,
+    additional_info,
+    altmetric,
+    annotation,
+    arxiv,
+    award,
+    award_name,
+    bibtex_show,
+    blog,
+    code,
+    google_scholar_id,
+    html,
+    inspirehep_id,
+    pdf,
+    poster,
+    preview,
+    selected,
+    slides,
+    supp,
+    video,
+    website,
+  ]
+
+# Maximum number of authors to be shown for each publication (more authors are visible on click)
+max_author_limit: 3 # leave blank to always show all authors
+more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
+
+# Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
+enable_publication_thumbnails: true
 
 # -----------------------------------------------------------------------------
 # Jekyll Link Attributes
@@ -288,7 +347,7 @@ external_links:
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
 imagemagick:
-  enabled: false # disabled for GitHub Pages compatibility
+  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
   widths:
     - 480
     - 800
