@@ -1,0 +1,72 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Guozhen Zhu
+    - name: Email
+      value: gzzhu@terpmail.umd.edu
+    - name: Location
+      value: Rockville, MD, USA
+    - name: Languages
+      value: English, Chinese
+
+- title: Education
+  type: time_table
+  contents:
+    - title: Ph.D. in Electrical Engineering
+      institution: University of Maryland, College Park, MD, USA
+      year: 2023
+      description:
+        - ECE Department
+        - Focus on wireless sensing and signal processing
+    - title: M.S. in Electrical Engineering
+      institution: University of Maryland, College Park, MD, USA
+      year: 2022
+      description:
+        - ECE Department
+        - Focus on wireless sensing and signal processing
+    - title: B.S. in Electronic Engineering
+      institution: Xidian University, Xi'an, China
+      year: 2019
+      description:
+        - Department of Electronic Engineering
+
+- title: Experience
+  type: time_table
+  contents:
+    - title: Principal Scientist
+      institution: Origin Wireless AI, Rockville, MD, USA
+      year: 2023 - Present
+      description:
+        - Working on wireless sensing with K. J. Ray Liu
+        - Research in artificial intelligence and signal processing
+        - Focus on real-world applications of wireless sensing technology
+
+- title: Research Interests
+  type: nested_list
+  contents:
+    - title: Wireless Sensing
+      items:
+        - Signal processing for wireless systems
+        - Real-world applications of wireless sensing
+    - title: Artificial Intelligence
+      items:
+        - Machine learning applications
+        - AI-driven signal processing
+    - title: Signal and Image Processing
+      items:
+        - Advanced signal processing techniques
+        - Image processing algorithms
+    - title: Internet of Things (IoT)
+      items:
+        - IoT system design and optimization
+        - Connected device technologies
+    - title: Simultaneous Indoor Localization and Mapping (SLAM)
+      items:
+        - Indoor positioning systems
+        - Mapping algorithms
+
+- title: Other Interests
+  type: list
+  contents:
+    - <u>Philosophy:</u> Enjoys cool and artistic research works but believes in solving real-world problems
