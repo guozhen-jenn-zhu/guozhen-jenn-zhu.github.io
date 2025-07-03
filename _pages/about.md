@@ -13,7 +13,7 @@ profile:
     <p>Origin Wireless AI</p>
     <p>Rockville, MD, USA</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # disabled for GitHub Pages compatibility
 social: true # includes social icons at the bottom of the page
 
 announcements:
