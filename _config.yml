@@ -17,7 +17,7 @@ keywords: wireless-sensing, artificial-intelligence, signal-processing, IoT, loc
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🔬 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://guozhenzhu.github.io # the base hostname & protocol for your site - UPDATE THIS
+url: https://guozhen-jenn-zhu.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -85,8 +85,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: Guozhen Zhu # blog_name will be displayed in your blog page
+blog_description: Wireless sensing, AI, and signal processing research
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -196,22 +196,18 @@ keep_files:
 
 # Plug-ins
 plugins:
-  - jekyll-archives-v2
   - jekyll-email-protect
   - jekyll-feed
-  - jekyll-get-json
-  - jekyll-imagemagick
-  - jekyll-jupyter-notebook
-  - jekyll-link-attributes
-  - jekyll-minifier
-  - jekyll-paginate-v2
-  - jekyll-regex-replace
-  - jekyll/scholar
   - jekyll-sitemap
-  - jekyll-tabs
-  - jekyll-terser
+  - jekyll-paginate-v2
+  - jekyll/scholar
+  - jekyll-minifier
+  - jekyll-get-json
+  - jekyll-link-attributes
   - jekyll-toc
-  - jekyll-twitter-plugin
+  - jekyll-tabs
+  - jekyll-regex-replace
+  - jekyll-archives-v2
   - jemoji
 
 # Sitemap settings
@@ -346,7 +342,7 @@ external_links:
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
 imagemagick:
-  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
+  enabled: false # disabled for GitHub Pages compatibility
   widths:
     - 480
     - 800
