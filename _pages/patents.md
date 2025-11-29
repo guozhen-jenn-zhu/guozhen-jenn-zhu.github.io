@@ -15,19 +15,27 @@ nav_order: 3
     <li>
       <div class="row">
         <div class="col-sm-2 abbr">
-          <abbr class="badge rounded w-100">{{ patent.year }}</abbr>
+          <abbr class="badge rounded w-100" style="background-color: var(--global-theme-color);">{{ patent.year }}</abbr>
         </div>
         <div id="{{ patent.number | slugify }}" class="col-sm-10">
-          <div class="title">{{ patent.title }}</div>
+          <div class="title">
+            {% if patent.url %}
+              <a href="{{ patent.url }}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='var(--global-theme-color)'" onmouseout="this.style.color='inherit'">{{ patent.title }}</a>
+            {% else %}
+              {{ patent.title }}
+            {% endif %}
+          </div>
           <div class="author">
             {{ patent.authors }}
           </div>
           <div class="periodical">
             <em>{{ patent.type }} No. {{ patent.number }}. (Granted {{ patent.year }})</em>
-            {% if patent.url %}
-              <a href="{{ patent.url }}" target="_blank" rel="noopener noreferrer" class="links">[Link]</a>
-            {% endif %}
           </div>
+          {% if patent.url %}
+            <div class="links">
+              <a href="{{ patent.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm z-depth-0" role="button">Link</a>
+            </div>
+          {% endif %}
         </div>
       </div>
     </li>
@@ -41,19 +49,27 @@ nav_order: 3
     <li>
       <div class="row">
         <div class="col-sm-2 abbr">
-          <abbr class="badge rounded w-100">{{ patent.year }}</abbr>
+          <abbr class="badge rounded w-100" style="background-color: var(--global-divider-color);">{{ patent.year }}</abbr>
         </div>
         <div id="{{ patent.number | slugify }}" class="col-sm-10">
-          <div class="title">{{ patent.title }}</div>
+          <div class="title">
+            {% if patent.url %}
+              <a href="{{ patent.url }}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='var(--global-theme-color)'" onmouseout="this.style.color='inherit'">{{ patent.title }}</a>
+            {% else %}
+              {{ patent.title }}
+            {% endif %}
+          </div>
           <div class="author">
             {{ patent.authors }}
           </div>
           <div class="periodical">
             <em>{{ patent.type }} No. {{ patent.number }}.</em>
-            {% if patent.url %}
-              <a href="{{ patent.url }}" target="_blank" rel="noopener noreferrer" class="links">[Link]</a>
-            {% endif %}
           </div>
+          {% if patent.url %}
+            <div class="links">
+              <a href="{{ patent.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm z-depth-0" role="button">Link</a>
+            </div>
+          {% endif %}
         </div>
       </div>
     </li>
