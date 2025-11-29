@@ -54,6 +54,16 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            build-essential \
+            imagemagick \
+            python3-pip \
+            zlib1g-dev
+          pip3 install --break-system-packages nbconvert
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -71,11 +81,6 @@ jobs:
           npm ci
           bundle install
 
-      - name: Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y imagemagick
-
       - name: Install purgecss
         run: |
           npm install -g purgecss
@@ -84,7 +89,7 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: |
-          bundle exec jekyll build
+          bundle exec jekyll build --verbose --trace
 
       - name: Purge CSS
         continue-on-error: true
