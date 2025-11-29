@@ -1,0 +1,91 @@
+name: Deploy site
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '*.md'
+      - '.gitignore'
+      - 'LICENSE'
+      - 'CNAME'
+      - 'bin/**'
+      - 'bin'
+      - 'docker-compose.yml'
+      - 'docker-compose-slim.yml'
+      - 'Dockerfile'
+      - 'FAQ.md'
+      - 'INSTALL.md'
+      - 'README.md'
+      - 'CONTRIBUTING.md'
+      - 'CUSTOMIZE.md'
+      - 'readme_preview/**'
+      - 'lighthouse_results/**'
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - '*.md'
+      - '.gitignore'
+      - 'LICENSE'
+      - 'CNAME'
+      - 'bin/**'
+      - 'bin'
+      - 'docker-compose.yml'
+      - 'docker-compose-slim.yml'
+      - 'Dockerfile'
+      - 'FAQ.md'
+      - 'INSTALL.md'
+      - 'README.md'
+      - 'CONTRIBUTING.md'
+      - 'CUSTOMIZE.md'
+      - 'readme_preview/**'
+      - 'lighthouse_results/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3.5
+          bundler-cache: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          bundle install
+
+      - name: Build site
+        env:
+          JEKYLL_ENV: production
+        run: |
+          bundle exec jekyll build
+
+      - name: Purge CSS
+        run: |
+          npx purgecss -c purgecss.config.js
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          cname: false
+
