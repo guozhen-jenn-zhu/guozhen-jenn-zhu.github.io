@@ -1,0 +1,19 @@
+<div class="industry-impact">
+  <ul class="list-unstyled">
+    {% for item in site.data.industry_impact %}
+      <li class="mb-3">
+        <strong>{{ item.company }}</strong>
+        {% if item.year %}
+          <span class="text-muted">({{ item.year }})</span>
+        {% endif %}
+        <br>
+        <span class="text-muted">{{ item.description }}</span>
+        {% if item.patents %}
+          <br>
+          <small class="text-muted">Based on {{ item.patents }}.</small>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+

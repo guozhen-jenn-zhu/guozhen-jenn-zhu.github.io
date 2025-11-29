@@ -20,6 +20,9 @@ announcements:
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: # handled by expandable news functionality
 
+industry_impact:
+  enabled: true # includes industry impact section
+
 latest_posts:
   enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
@@ -38,7 +41,6 @@ My current research focuses on building robust and generalizable intelligence fr
 * Generalizable intelligence – developing methods that address distribution shifts and variability across users, devices, and environments to ensure reliable performance in real-world conditions.
 
 **I like cool and artistic research works but believe in those solving real-world problems.**
-
 
 Outside of work, you'll often find me on the tennis court :tennis:, playing the piano :musical_keyboard:, baking something semi-sweet :cake:, or soaking in nature's beauty :deciduous_tree:.
 

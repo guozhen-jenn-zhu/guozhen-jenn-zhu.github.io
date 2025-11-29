@@ -70,6 +70,14 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
+    <!-- Industry Impact -->
+    {% if page.industry_impact and page.industry_impact.enabled %}
+      <hr style="border: none; height: 1px; background-color: #e0e0e0; margin: 2rem 0;">
+      <h2>Industry Impact</h2>
+      <p class="text-muted mb-3">Technology deployed worldwide across multiple sectors:</p>
+      {% include industry_impact.liquid %}
+    {% endif %}
+
     <!-- Social -->
     {% if page.social %}
       <div class="social">
