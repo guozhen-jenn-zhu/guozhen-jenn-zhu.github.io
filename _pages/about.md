@@ -10,6 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>gzzhu [at] terpmail.umd.edu</p>
+    <p><a href="{{ '/assets/pdf/CV_Guozhen.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Curriculum Vitae (PDF)</a></p>
     
 
 social: true # includes social icons at the bottom of the page
