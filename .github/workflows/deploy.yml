@@ -71,6 +71,15 @@ jobs:
           npm ci
           bundle install
 
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      - name: Install purgecss
+        run: |
+          npm install -g purgecss
+
       - name: Build site
         env:
           JEKYLL_ENV: production
@@ -78,8 +87,9 @@ jobs:
           bundle exec jekyll build
 
       - name: Purge CSS
+        continue-on-error: true
         run: |
-          npx purgecss -c purgecss.config.js
+          purgecss -c purgecss.config.js
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
