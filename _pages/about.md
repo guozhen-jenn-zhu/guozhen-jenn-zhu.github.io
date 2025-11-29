@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>gzzhu [at] terpmail.umd.edu</p>
-    <p><a href="https://drive.google.com/uc?export=download&id=1zP5pzR2BQ-YJlxkjInd8lWf62YsUN_dC" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Curriculum Vitae (PDF)</a></p>
+    <p><a href="https://drive.google.com/file/d/1zP5pzR2BQ-YJlxkjInd8lWf62YsUN_dC/preview" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Curriculum Vitae (PDF)</a></p>
     
 
 social: true # includes social icons at the bottom of the page
