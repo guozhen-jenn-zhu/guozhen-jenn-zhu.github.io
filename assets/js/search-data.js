@@ -23,6 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-patents",
+          title: "patents",
+          description: "Patents and patent applications",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/patents/";
+          },
         },{id: "nav-projects",
           title: "projects",
           description: "A growing collection of your cool projects.",
@@ -44,19 +51,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-teaching",
-          title: "teaching",
-          description: "Materials for courses you taught. Replace this text with your description.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/teaching/";
-          },
         },{id: "nav-people",
           title: "people",
           description: "members of the lab or group",
           section: "Navigation",
           handler: () => {
             window.location.href = "/people/";
+          },
+        },{id: "nav-teaching",
+          title: "teaching",
+          description: "Materials for courses you taught. Replace this text with your description.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
           },
         },{id: "dropdown-bookshelf",
               title: "bookshelf",
@@ -510,6 +517,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("mailto:%67%7A%7A%68%75@%74%65%72%70%6D%61%69%6C.%75%6D%64.%65%64%75", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/guozhen-jenn-zhu# your GitHub user name", "_blank");
         },
       },{
         id: 'social-linkedin',
