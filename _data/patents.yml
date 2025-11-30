@@ -4,6 +4,7 @@
   type: "U.S. Patent"
   status: "Granted"
   year: 2025
+  domain: "Core wireless sensing & learning"
   url: "https://patents.google.com/patent/US12352889B2/en"
 
 - title: "Method, apparatus, and system for map reconstruction based on wireless tracking"
@@ -12,6 +13,7 @@
   type: "U.S. Patent"
   status: "Granted"
   year: 2024
+  domain: "Localization & mapping"
   url: "https://patents.google.com/patent/US12078510B2/en"
 
 - title: "Method, apparatus, and system for wireless proximity detection"
@@ -20,6 +22,7 @@
   type: "U.S. Patent"
   status: "Granted"
   year: 2025
+  domain: "Human activity & behavior"
   url: "https://patents.google.com/patent/US12256360B2/en"
 
 - title: "Wireless sensing for in-vehicle child presence detection"
@@ -28,6 +31,7 @@
   type: "U.S. Patent"
   status: "Granted"
   year: 2025
+  domain: "Automotive safety"
   url: "https://patents.google.com/patent/US12352844B2/en"
 
 - title: "System and method for radio-assisted sound sensing"
@@ -36,6 +40,7 @@
   type: "EU Patent"
   status: "Granted"
   year: 2024
+  domain: "Sound & audio sensing"
   url: "https://patents.google.com/patent/EP4102247B1/en"
 
 - title: "System and method for radio-based sleep monitoring"
@@ -44,6 +49,7 @@
   type: "EU Patent App."
   status: "Pending"
   year: 2024
+  domain: "Healthcare & wellbeing"
   url: "https://patents.google.com/patent/EP4102247A1/en"
 
 - title: "Method, apparatus, and system for wireless human and non-human motion detection"
@@ -52,6 +58,7 @@
   type: "U.S. Patent App."
   status: "Pending"
   year: 2024
+  domain: "Human activity & behavior"
   url: "https://patents.google.com/patent/US20240125888A1/en"
 
 - title: "System and method for wireless human-nonhuman motion classification"
@@ -60,6 +67,7 @@
   type: "EU Patent App."
   status: "Pending"
   year: 2024
+  domain: "Human activity & behavior"
   url: "https://patents.google.com/patent/EP24150597A1/en"
 
 - title: "Methods, apparatus, and systems for wireless detection, sensing, and learning"
@@ -68,6 +76,7 @@
   type: "JP Patent App."
   status: "Pending"
   year: 2025
+  domain: "Core wireless sensing & learning"
   url: "https://patents.google.com/patent/JP2025066624A/en"
 
 - title: "Wireless sensing using measurement enhancement"
@@ -76,6 +85,7 @@
   type: "U.S. Patent App."
   status: "Pending"
   year: 2025
+  domain: "Core wireless sensing & learning"
   url: "https://patents.google.com/patent/US20250141715A1/en"
 
 - title: "High resolution human imaging using neural network"
@@ -84,6 +94,7 @@
   type: "U.S. Patent App."
   status: "Pending"
   year: 2025
+  domain: "Healthcare & wellbeing"
   url: "https://patents.google.com/patent/US20250139738A1/en"
 
 - title: "An intelligent wearable device for communication between deaf mute and normal person"
@@ -92,5 +103,6 @@
   type: "Chinese Patent"
   status: "Granted"
   year: 2017
+  domain: "Assistive & wearable devices"
   url: ""
 

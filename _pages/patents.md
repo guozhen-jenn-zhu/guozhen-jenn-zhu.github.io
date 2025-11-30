@@ -42,12 +42,64 @@ _styles: |
     font-weight: 600;
     margin-top: 0.25rem;
   }
+
+  .patent-domain-heading {
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--global-muted-text-color);
+    text-align: right;
+  }
+
+  .publications h2.bibliography {
+    margin-top: 1.5rem;
+    padding-top: 0.75rem;
+  }
+
+  .publications ol.bibliography.patent-list {
+    margin-bottom: 0.75rem;
+  }
+
+  .publications ol.bibliography.patent-list > li {
+    margin-bottom: 0.5rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  .publications .patent-list .title {
+    font-size: 1rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .publications .patent-list .author {
+    font-size: 0.9rem;
+    margin-bottom: 0.15rem;
+    color: var(--global-text-color-light);
+  }
+
+  .publications .patent-list .periodical {
+    font-size: 0.85rem;
+  }
+
+  .publications .abbr abbr.badge {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .author-me {
+    font-weight: 600;
+    color: var(--global-theme-color);
+  }
 ---
 
 <div class="publications">
   {% assign granted_patents = site.data.patents | where: "status", "Granted" | sort: "year" | reverse %}
   {% assign pending_patents = site.data.patents | where: "status", "Pending" | sort: "year" | reverse %}
   {% assign jurisdictions = site.data.patents | map: "type" | uniq %}
+  {% assign granted_domains = granted_patents | map: "domain" | uniq | sort %}
+  {% assign pending_domains = pending_patents | map: "domain" | uniq | sort %}
 
   <div class="patent-intro">
     <p>My patents focus on wireless sensing, radio-based perception, and human-centered AI.</p>
@@ -70,69 +122,127 @@ _styles: |
   </div>
 
   <h2 class="bibliography">Granted Patents</h2>
-  <ol class="bibliography">
-    {% for patent in granted_patents %}
-    <li>
-      <div class="row">
-        <div class="col-sm-2 abbr">
-          <abbr class="badge rounded w-100" style="background-color: var(--global-theme-color);">{{ patent.year }}</abbr>
-        </div>
-        <div id="{{ patent.number | slugify }}" class="col-sm-10">
-          <div class="title">
-            {% if patent.url %}
-              <a href="{{ patent.url }}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='var(--global-theme-color)'" onmouseout="this.style.color='inherit'">{{ patent.title }}</a>
-            {% else %}
-              {{ patent.title }}
-            {% endif %}
-          </div>
-          <div class="author">
-            {{ patent.authors }}
-          </div>
-          <div class="periodical">
-            <em>{{ patent.type }} No. {{ patent.number }}. (Granted {{ patent.year }})</em>
-          </div>
-          {% if patent.url %}
-            <div class="links">
-              <a href="{{ patent.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm z-depth-0" role="button">Full text</a>
+  {% for domain in granted_domains %}
+    <h3 class="patent-domain-heading">{{ domain }}</h3>
+    <ol class="bibliography patent-list">
+      {% for patent in granted_patents %}
+        {% if patent.domain == domain %}
+        <li>
+          <div class="row">
+            <div class="col-sm-2 abbr">
+              <abbr class="badge rounded w-100" style="background-color: var(--global-theme-color);">{{ patent.year }}</abbr>
             </div>
-          {% endif %}
-        </div>
-      </div>
-    </li>
-    {% endfor %}
-  </ol>
+            <div id="{{ patent.number | slugify }}" class="col-sm-10">
+              <div class="title">
+                {% if patent.url %}
+                  <a href="{{ patent.url }}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='var(--global-theme-color)'" onmouseout="this.style.color='inherit'">{{ patent.title }}</a>
+                {% else %}
+                  {{ patent.title }}
+                {% endif %}
+              </div>
+              <div class="author" title="{{ patent.authors }}">
+                {% assign authors_array = patent.authors | split: ', ' %}
+                {% assign max_authors = 3 %}
+                {% assign authors_count = authors_array | size %}
+
+                {% for author in authors_array %}
+                  {% if forloop.index0 < max_authors %}
+                    {% assign is_self = false %}
+                    {% if author contains 'Guozhen Zhu' %}
+                      {% assign is_self = true %}
+                    {% endif %}
+                    {% if is_self %}
+                      <span class="author-me">{{ author }}</span>
+                    {% else %}
+                      {{ author }}
+                    {% endif %}
+                    {% if forloop.index0 < max_authors - 1 and forloop.index0 < authors_count - 1 %}
+                      , 
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+
+                {% assign remaining = authors_count | minus: max_authors %}
+                {% if remaining > 0 %}
+                  , <span class="more-authors">+ {{ remaining }} more</span>
+                {% endif %}
+              </div>
+              <div class="periodical">
+                <em>{{ patent.type }} No. {{ patent.number }}. (Granted {{ patent.year }})</em>
+              </div>
+              {% if patent.url %}
+                <div class="links">
+                  <a href="{{ patent.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm z-depth-0" role="button">Full text</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  {% endfor %}
 
   <h2 class="bibliography">Pending Patent Applications</h2>
-  <ol class="bibliography">
-    {% for patent in pending_patents %}
-    <li>
-      <div class="row">
-        <div class="col-sm-2 abbr">
-          <abbr class="badge rounded w-100" style="background-color: var(--global-divider-color);">{{ patent.year }}</abbr>
-        </div>
-        <div id="{{ patent.number | slugify }}" class="col-sm-10">
-          <div class="title">
-            {% if patent.url %}
-              <a href="{{ patent.url }}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='var(--global-theme-color)'" onmouseout="this.style.color='inherit'">{{ patent.title }}</a>
-            {% else %}
-              {{ patent.title }}
-            {% endif %}
-          </div>
-          <div class="author">
-            {{ patent.authors }}
-          </div>
-          <div class="periodical">
-            <em>{{ patent.type }} No. {{ patent.number }}.</em>
-          </div>
-          {% if patent.url %}
-            <div class="links">
-              <a href="{{ patent.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm z-depth-0" role="button">Full text</a>
+  {% for domain in pending_domains %}
+    <h3 class="patent-domain-heading">{{ domain }}</h3>
+    <ol class="bibliography patent-list">
+      {% for patent in pending_patents %}
+        {% if patent.domain == domain %}
+        <li>
+          <div class="row">
+            <div class="col-sm-2 abbr">
+              <abbr class="badge rounded w-100" style="background-color: var(--global-divider-color);">{{ patent.year }}</abbr>
             </div>
-          {% endif %}
-        </div>
-      </div>
-    </li>
-    {% endfor %}
-  </ol>
+            <div id="{{ patent.number | slugify }}" class="col-sm-10">
+              <div class="title">
+                {% if patent.url %}
+                  <a href="{{ patent.url }}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='var(--global-theme-color)'" onmouseout="this.style.color='inherit'">{{ patent.title }}</a>
+                {% else %}
+                  {{ patent.title }}
+                {% endif %}
+              </div>
+              <div class="author" title="{{ patent.authors }}">
+                {% assign authors_array = patent.authors | split: ', ' %}
+                {% assign max_authors = 3 %}
+                {% assign authors_count = authors_array | size %}
+
+                {% for author in authors_array %}
+                  {% if forloop.index0 < max_authors %}
+                    {% assign is_self = false %}
+                    {% if author contains 'Guozhen Zhu' %}
+                      {% assign is_self = true %}
+                    {% endif %}
+                    {% if is_self %}
+                      <span class="author-me">{{ author }}</span>
+                    {% else %}
+                      {{ author }}
+                    {% endif %}
+                    {% if forloop.index0 < max_authors - 1 and forloop.index0 < authors_count - 1 %}
+                      , 
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+
+                {% assign remaining = authors_count | minus: max_authors %}
+                {% if remaining > 0 %}
+                  , <span class="more-authors">+ {{ remaining }} more</span>
+                {% endif %}
+              </div>
+              <div class="periodical">
+                <em>{{ patent.type }} No. {{ patent.number }}.</em>
+              </div>
+              {% if patent.url %}
+                <div class="links">
+                  <a href="{{ patent.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm z-depth-0" role="button">Full text</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  {% endfor %}
 </div>
 
