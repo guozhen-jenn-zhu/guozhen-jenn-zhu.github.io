@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /patents/
-title: patents
+title: Patents
 description: Patents and patent applications
 nav: true
 nav_order: 3

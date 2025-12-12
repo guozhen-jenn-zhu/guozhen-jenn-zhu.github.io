@@ -1,6 +1,6 @@
 ---
 layout: page
-title: conferences
+title: Conferences
 permalink: /conferences/
 description: Tracking upcoming AI, ML, Computer Vision, Data Mining, HCI, Ubiquittic/Pervasive Computing, and Robotics conferences.
 nav: false

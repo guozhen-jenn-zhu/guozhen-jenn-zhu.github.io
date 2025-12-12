@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Principal Scientist @ <a href='https://www.originwirelessai.com/'>Origin AI</a>
 
