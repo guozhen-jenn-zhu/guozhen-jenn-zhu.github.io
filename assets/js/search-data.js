@@ -23,7 +23,14 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/patents/";
           },
-        },{id: "post-a-post-with-image-galleries",
+        },{id: "dropdown-conferences",
+              title: "conferences",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/conferences/";
+              },
+            },{id: "post-a-post-with-image-galleries",
       
         title: "a post with image galleries",
       
