@@ -349,15 +349,16 @@ nav: false
       </tr>
       <tr data-field="hci">
         <td class="conf-name">
-          <a href="https://uist.acm.org/" target="_blank">UIST 2026</a>
+          <a href="https://uist.acm.org/2026/" target="_blank">UIST 2026</a>
           <span class="conf-full-name">ACM Symposium on User Interface Software and Technology</span>
         </td>
         <td><span class="field-tag field-hci">HCI</span></td>
-        <td class="venue-info">TBD</td>
+        <td class="venue-info">Detroit, MI, USA</td>
         <td class="deadline-info">
-          <span class="deadline-projected">Paper: Apr 2026</span>
+          <span class="abstract">Abstract (tentative): Mar 24, 2026</span><br>
+          <span class="paper">Paper (tentative): Mar 31, 2026</span>
         </td>
-        <td class="dates-info">Oct 2026</td>
+        <td class="dates-info">Nov 02–05, 2026</td>
       </tr>
       <tr data-field="hci">
         <td class="conf-name">
@@ -400,15 +401,16 @@ nav: false
       </tr>
       <tr data-field="ubi">
         <td class="conf-name">
-          <a href="https://www.percom.org/" target="_blank">PerCom 2026</a>
+          <a href="https://percom.org/" target="_blank">PerCom 2026</a>
           <span class="conf-full-name">IEEE International Conference on Pervasive Computing and Communications</span>
         </td>
         <td><span class="field-tag field-ubi">Ubicomp</span></td>
-        <td class="venue-info">TBD</td>
+        <td class="venue-info">Pisa, Italy</td>
         <td class="deadline-info">
-          <span class="deadline-projected">Paper: Sep 2025</span>
+          <span class="abstract">Registration: Oct 03, 2025</span><br>
+          <span class="paper">Paper: Oct 03, 2025</span>
         </td>
-        <td class="dates-info">Mar 2026</td>
+        <td class="dates-info">Mar 16–20, 2026</td>
       </tr>
       <tr data-field="ubi">
         <td class="conf-name">
@@ -450,15 +452,15 @@ nav: false
       </tr>
       <tr data-field="rob">
         <td class="conf-name">
-          <a href="https://ieee-iros.org/" target="_blank">IROS 2026</a>
+          <a href="https://2026.ieee-iros.org/" target="_blank">IROS 2026</a>
           <span class="conf-full-name">IEEE/RSJ International Conference on Intelligent Robots and Systems</span>
         </td>
         <td><span class="field-tag field-rob">Robotics</span></td>
-        <td class="venue-info">TBD</td>
+        <td class="venue-info">Pittsburgh, PA, USA</td>
         <td class="deadline-info">
-          <span class="deadline-projected">Paper: Mar 2026</span>
+          <span class="paper">Paper: Mar 02, 2026</span>
         </td>
-        <td class="dates-info">Oct 2026</td>
+        <td class="dates-info">Sep 27–Oct 01, 2026</td>
       </tr>
       <tr data-field="rob">
         <td class="conf-name">
