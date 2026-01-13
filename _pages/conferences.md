@@ -224,7 +224,7 @@ nav: false
           <span class="abstract">Abstract: Jan 23, 2026</span><br>
           <span class="paper">Paper: Jan 28, 2026</span>
         </td>
-        <td class="dates-info">Jul 07–12, 2026</td>
+        <td class="dates-info">Jul 06–11, 2026</td>
       </tr>
       <tr data-field="ai">
         <td class="conf-name">
@@ -256,15 +256,16 @@ nav: false
       <!-- Computer Vision -->
       <tr data-field="cv">
         <td class="conf-name">
-          <a href="https://cvpr.thecvf.com/" target="_blank">CVPR 2026</a>
+          <a href="https://cvpr.thecvf.com/Conferences/2026" target="_blank">CVPR 2026</a>
           <span class="conf-full-name">IEEE/CVF Conference on Computer Vision and Pattern Recognition</span>
         </td>
         <td><span class="field-tag field-cv">CV</span></td>
         <td class="venue-info">Denver, CO, USA</td>
         <td class="deadline-info">
-          <span class="deadline-projected">Paper: Nov 2025</span>
+          <span class="abstract">Abstract: Nov 07, 2025</span><br>
+          <span class="paper">Paper: Nov 13, 2025</span>
         </td>
-        <td class="dates-info">Jun 17–21, 2026</td>
+        <td class="dates-info">Jun 03–07, 2026</td>
       </tr>
       <tr data-field="cv">
         <td class="conf-name">
@@ -274,9 +275,10 @@ nav: false
         <td><span class="field-tag field-cv">CV</span></td>
         <td class="venue-info">Malmö, Sweden</td>
         <td class="deadline-info">
-          <span class="deadline-projected">Paper: Mar 2026</span>
+          <span class="abstract">Registration: Feb 26, 2026</span><br>
+          <span class="paper">Paper: Mar 05, 2026</span>
         </td>
-        <td class="dates-info">Sep 8–13, 2026</td>
+        <td class="dates-info">Sep 08–13, 2026</td>
       </tr>
       <tr data-field="cv">
         <td class="conf-name">
@@ -300,10 +302,10 @@ nav: false
         <td><span class="field-tag field-dm">Data Mining</span></td>
         <td class="venue-info">Jeju, South Korea</td>
         <td class="deadline-info">
-          <span class="paper">Cycle 1: Jul 2025</span><br>
-          <span class="paper">Cycle 2: Feb 2026</span>
+          <span class="abstract">Cycle 1 Abstract: Jul 24, 2025</span><br>
+          <span class="paper">Cycle 1 Paper: Jul 31, 2025</span>
         </td>
-        <td class="dates-info">Aug 9–13, 2026</td>
+        <td class="dates-info">Aug 09–13, 2026</td>
       </tr>
       <tr data-field="dm">
         <td class="conf-name">
@@ -334,7 +336,7 @@ nav: false
       <!-- Human-Computer Interaction -->
       <tr data-field="hci">
         <td class="conf-name">
-          <a href="https://chi2026.acm.org/" target="_blank">CHI 2026</a>
+          <a href="https://chi2026.acm.org" target="_blank">CHI 2026</a>
           <span class="conf-full-name">ACM Conference on Human Factors in Computing Systems</span>
         </td>
         <td><span class="field-tag field-hci">HCI</span></td>
@@ -436,7 +438,7 @@ nav: false
       <!-- Robotics -->
       <tr data-field="rob">
         <td class="conf-name">
-          <a href="https://2026.ieee-icra.org" target="_blank">ICRA 2026</a>
+          <a href="https://2026.ieee-icra.org/" target="_blank">ICRA 2026</a>
           <span class="conf-full-name">IEEE International Conference on Robotics and Automation</span>
         </td>
         <td><span class="field-tag field-rob">Robotics</span></td>
@@ -466,7 +468,8 @@ nav: false
         <td><span class="field-tag field-rob">Robotics</span></td>
         <td class="venue-info">Sydney, Australia</td>
         <td class="deadline-info">
-          <span class="deadline-projected">Paper: Jan 2026</span>
+          <span class="abstract">Abstract: Jan 23, 2026</span><br>
+          <span class="paper">Paper: Jan 30, 2026</span>
         </td>
         <td class="dates-info">Jul 13–17, 2026</td>
       </tr>
@@ -487,7 +490,7 @@ nav: false
 </div>
 
 <p class="last-updated">
-  <i class="fa-solid fa-info-circle"></i> Deadlines prefixed with ~ are projected based on historical patterns. Please verify on official conference websites. Last updated: December 2024.
+  <i class="fa-solid fa-info-circle"></i> Deadlines prefixed with ~ are projected based on historical patterns. Please verify on official conference websites. Last updated: January 2026.
 </p>
 
 <script>
