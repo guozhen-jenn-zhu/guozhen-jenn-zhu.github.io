@@ -45,7 +45,7 @@ Research interests:
 
 * **Human-centric ambient intelligence:** understanding human state, behavior, and context to enable safety, health, and spatial intelligence in real-world environments
 
-**I like cool and artistic research works but believe in those solving real-world problems.**
+<!-- **I like cool and artistic research works but believe in those solving real-world problems.** -->
 
 Outside of work, you'll often find me on the tennis court :tennis:, playing the piano :musical_keyboard:, baking something semi-sweet :cake:, or soaking in nature's beauty :deciduous_tree:.
 
