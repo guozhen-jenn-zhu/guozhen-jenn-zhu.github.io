@@ -29,16 +29,21 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
+Hi, I’m Guozhen Zhu. I build learning systems that turn raw observations into re helpfully and responsibly in the real world. I currently focus on foundation-model-driven perception through large-scale representation learning and multimodal/temporal modeling.
 
-Hi, I'm Guozhen Zhu, currently working with [Dr. K. J. Ray Liu](https://www.ece.umd.edu/~kjrliu/) at [Origin AI](https://www.originwirelessai.com/), where I lead cutting-edge research in [context-aware](https://en.wikipedia.org/wiki/Context_awareness) AI systems and [ambient intelligent](https://en.wikipedia.org/wiki/Ambient_intelligence) sensing technologies. I received my M.S. and Ph.D. in Electrical Engineering from the [University of Maryland, College Park](https://www.umd.edu/), in 2022 and 2023, respectively.
+I’m a Principal Scientist at [Origin AI](https://www.originwirelessai.com/), where I lead research on foundation models and multimodal/temporal learning for [ambient intelligent](https://en.wikipedia.org/wiki/Ambient_intelligence)—covering human presence, activity and motion understanding, localization, and health-related sensing. I care about turning research into real impact: my work has been deployed at scale (e.g., 25M+ routers and 100M+ smart devices) in consumer and security products.
+
+Before Origin, I earned my Ph.D and M.S. in Electrical Engineering from the [University of Maryland, College Park](https://www.umd.edu/), advised by [Dr. K. J. Ray Liu](https://www.ece.umd.edu/~kjrliu/). My research explored how to learn reliable world understanding from real-world sensing data, spanning motion analytics, mapping, and localization.
 
 
-My research aims to make intelligent systems more aware, adaptive, and trustworthy in the real world. I focus on enabling devices to **sense, understand, and respond to human activity and environmental context** in a contactless, scalable, and privacy-preserving way—empowering applications in smart homes, healthcare, security, and beyond.
+<!-- My research aims to make intelligent systems more aware, adaptive, and trustworthy in the real world. I focus on enabling devices to **sense, understand, and respond to human activity and environmental context** in a contactless, scalable, and privacy-preserving way—empowering applications in smart homes, healthcare, security, and beyond. -->
 
-My current research focuses on building robust and generalizable intelligence from real-world ambient signals:
-* Signal-driven representation learning - extracting interpretable and resilient features that disentangle target-relevant information from noisy, entangled spatiotemporal signals.
-* Edge AI - designing efficient models for real-time inference and learning on resource-constrained edge devices.
-* Generalizable intelligence – developing methods that address distribution shifts and variability across users, devices, and environments to ensure reliable performance in real-world conditions.
+Research interests:
+* **Foundation models for perception:** large-scale representation learning for multimodal & temporal data, with strong transfer across tasks and modalities
+
+* **Reasoning & interaction on top of perception:** LLMs and agents for interaction, planning, tool use, and grounded decision-making using learned representations
+
+* **Human-centric ambient intelligence:** understanding human state, behavior, and context to enable safety, health, and spatial intelligence in real-world environments
 
 **I like cool and artistic research works but believe in those solving real-world problems.**
 
