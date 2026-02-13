@@ -29,11 +29,11 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi, I’m Guozhen Zhu. I build learning systems that turn raw observations into re helpfully and responsibly in the real world. I currently focus on foundation-model-driven perception through large-scale representation learning and multimodal/temporal modeling.
+Hi, I’m Guozhen Zhu. I build AI systems that turn raw observations into transferable representations of **human state and context**, enabling machines to act more helpfully and responsibly in the real world. My work is motivated by human needs like safety, health, and everyday well-being, and grounded in building learning systems that can move from research into real-world use.
 
-I’m a Principal Scientist at [Origin AI](https://www.originwirelessai.com/), where I lead research on foundation models and multimodal/temporal learning for [ambient intelligent](https://en.wikipedia.org/wiki/Ambient_intelligence)—covering human presence, activity and motion understanding, localization, and health-related sensing. I care about turning research into real impact: my work has been deployed at scale (e.g., 25M+ routers and 100M+ smart devices) in consumer and security products.
+I’m currently a Principal Scientist at [Origin AI](https://www.originwirelessai.com/), where I lead research on foundation-model-based perception and multimodal/temporal learning for [ambient intelligent](https://en.wikipedia.org/wiki/Ambient_intelligence). I build general-purpose representations and study how to adapt them efficiently across tasks such as presence understanding, motion and activity, localization, and health-related sensing. My research has translated into products deployed at scale (e.g., 25M+ routers and 100M+ smart devices) in consumer and security products.
 
-Before Origin, I earned my Ph.D and M.S. in Electrical Engineering from the [University of Maryland, College Park](https://www.umd.edu/), advised by [Dr. K. J. Ray Liu](https://www.ece.umd.edu/~kjrliu/). My research explored how to learn reliable world understanding from real-world sensing data, spanning motion analytics, mapping, and localization.
+Before Origin, I earned my Ph.D and M.S. in Electrical Engineering from the [University of Maryland, College Park](https://www.umd.edu/), advised by [Dr. K. J. Ray Liu](https://www.ece.umd.edu/~kjrliu/). Across academia and industry, I’ve focused on bridging modern ML with real-world perception—turning messy, high-dimensional signals into stable, transferable representations and actionable understanding.
 
 
 <!-- My research aims to make intelligent systems more aware, adaptive, and trustworthy in the real world. I focus on enabling devices to **sense, understand, and respond to human activity and environmental context** in a contactless, scalable, and privacy-preserving way—empowering applications in smart homes, healthcare, security, and beyond. -->
