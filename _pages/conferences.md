@@ -149,6 +149,15 @@ nav: false
 .field-ubi { background: rgba(0, 188, 212, 0.15); color: #0097a7; }
 .field-rob { background: rgba(233, 30, 99, 0.15); color: #c2185b; }
 
+.deadline-passed {
+  opacity: 0.6;
+  border-left: 3px solid rgba(158, 158, 158, 0.5);
+}
+
+.deadline-upcoming {
+  border-left: 3px solid rgba(76, 175, 80, 0.6);
+}
+
 @media (max-width: 768px) {
   .conference-tracker {
     overflow-x: auto;
@@ -187,7 +196,7 @@ nav: false
     </thead>
     <tbody>
       <!-- AI & Machine Learning -->
-      <tr data-field="ai">
+      <tr data-field="ai" data-deadline="2025-08-01">
         <td class="conf-name">
           <a href="https://aaai.org/conference/aaai/aaai-26/" target="_blank">AAAI 2026</a>
           <span class="conf-full-name">AAAI Conference on Artificial Intelligence</span>
@@ -200,7 +209,7 @@ nav: false
         </td>
         <td class="dates-info">Jan 20–27, 2026</td>
       </tr>
-      <tr data-field="ai">
+      <tr data-field="ai" data-deadline="2025-09-24">
         <td class="conf-name">
           <a href="https://iclr.cc/Conferences/2026" target="_blank">ICLR 2026</a>
           <span class="conf-full-name">International Conference on Learning Representations</span>
@@ -213,7 +222,7 @@ nav: false
         </td>
         <td class="dates-info">Apr 23–27, 2026</td>
       </tr>
-      <tr data-field="ai">
+      <tr data-field="ai" data-deadline="2026-01-28">
         <td class="conf-name">
           <a href="https://icml.cc/Conferences/2026" target="_blank">ICML 2026</a>
           <span class="conf-full-name">International Conference on Machine Learning</span>
@@ -226,7 +235,7 @@ nav: false
         </td>
         <td class="dates-info">Jul 06–11, 2026</td>
       </tr>
-      <tr data-field="ai">
+      <tr data-field="ai" data-deadline="2026-01-19">
         <td class="conf-name">
           <a href="https://2026.ijcai.org" target="_blank">IJCAI 2026</a>
           <span class="conf-full-name">International Joint Conference on Artificial Intelligence</span>
@@ -239,22 +248,35 @@ nav: false
         </td>
         <td class="dates-info">Aug 15–21, 2026</td>
       </tr>
-      <tr data-field="ai">
+      <tr data-field="ai" data-deadline="2026-03-14">
+        <td class="conf-name">
+          <a href="https://2026.aclweb.org/" target="_blank">ACL 2026</a>
+          <span class="conf-full-name">Association for Computational Linguistics</span>
+        </td>
+        <td><span class="field-tag field-ai">AI/ML</span></td>
+        <td class="venue-info">TBD</td>
+        <td class="deadline-info">
+          <span class="abstract">ARR Submission: Jan 05, 2026</span><br>
+          <span class="paper">Commitment: Mar 14, 2026</span>
+        </td>
+        <td class="dates-info">Jul 2026</td>
+      </tr>
+      <tr data-field="ai" data-deadline="2026-05-22">
         <td class="conf-name">
           <a href="https://neurips.cc/" target="_blank">NeurIPS 2026</a>
           <span class="conf-full-name">Conference on Neural Information Processing Systems</span>
         </td>
         <td><span class="field-tag field-ai">AI/ML</span></td>
-        <td class="venue-info">TBD</td>
+        <td class="venue-info">San Diego, CA, USA</td>
         <td class="deadline-info">
-          <span class="deadline-projected">Abstract: May 2026</span><br>
-          <span class="deadline-projected">Paper: May 2026</span>
+          <span class="abstract">Abstract: May 15, 2026</span><br>
+          <span class="paper">Paper: May 22, 2026</span>
         </td>
-        <td class="dates-info">Dec 2026</td>
+        <td class="dates-info">Dec 06–12, 2026</td>
       </tr>
       
       <!-- Computer Vision -->
-      <tr data-field="cv">
+      <tr data-field="cv" data-deadline="2025-11-13">
         <td class="conf-name">
           <a href="https://cvpr.thecvf.com/Conferences/2026" target="_blank">CVPR 2026</a>
           <span class="conf-full-name">IEEE/CVF Conference on Computer Vision and Pattern Recognition</span>
@@ -267,7 +289,7 @@ nav: false
         </td>
         <td class="dates-info">Jun 03–07, 2026</td>
       </tr>
-      <tr data-field="cv">
+      <tr data-field="cv" data-deadline="2026-03-05">
         <td class="conf-name">
           <a href="https://eccv.ecva.net/" target="_blank">ECCV 2026</a>
           <span class="conf-full-name">European Conference on Computer Vision</span>
@@ -280,7 +302,7 @@ nav: false
         </td>
         <td class="dates-info">Sep 08–13, 2026</td>
       </tr>
-      <tr data-field="cv">
+      <tr data-field="cv" data-deadline="2027-03-15">
         <td class="conf-name">
           <a href="https://iccv.thecvf.com/" target="_blank">ICCV 2027</a>
           <span class="conf-full-name">International Conference on Computer Vision</span>
@@ -294,7 +316,7 @@ nav: false
       </tr>
       
       <!-- Data Mining & Knowledge Discovery -->
-      <tr data-field="dm">
+      <tr data-field="dm" data-deadline="2025-07-31">
         <td class="conf-name">
           <a href="https://kdd2026.kdd.org/" target="_blank">KDD 2026</a>
           <span class="conf-full-name">ACM SIGKDD Conference on Knowledge Discovery and Data Mining</span>
@@ -307,7 +329,7 @@ nav: false
         </td>
         <td class="dates-info">Aug 09–13, 2026</td>
       </tr>
-      <tr data-field="dm">
+      <tr data-field="dm" data-deadline="2025-10-10">
         <td class="conf-name">
           <a href="https://www.siam.org/conferences-events/siam-conferences/sdm26/" target="_blank">SDM 2026</a>
           <span class="conf-full-name">SIAM International Conference on Data Mining</span>
@@ -315,11 +337,11 @@ nav: false
         <td><span class="field-tag field-dm">Data Mining</span></td>
         <td class="venue-info">TBD</td>
         <td class="deadline-info">
-          <span class="deadline-projected">Paper: Oct 2025</span>
+          <span class="paper">Paper: Oct 10, 2025</span>
         </td>
         <td class="dates-info">Apr 2026</td>
       </tr>
-      <tr data-field="dm">
+      <tr data-field="dm" data-deadline="2026-03-15">
         <td class="conf-name">
           <a href="https://ecmlpkdd.org/" target="_blank">ECML-PKDD 2026</a>
           <span class="conf-full-name">European Conference on ML and Principles of Knowledge Discovery</span>
@@ -334,7 +356,7 @@ nav: false
       </tr>
       
       <!-- Human-Computer Interaction -->
-      <tr data-field="hci">
+      <tr data-field="hci" data-deadline="2025-09-11">
         <td class="conf-name">
           <a href="https://chi2026.acm.org" target="_blank">CHI 2026</a>
           <span class="conf-full-name">ACM Conference on Human Factors in Computing Systems</span>
@@ -347,7 +369,7 @@ nav: false
         </td>
         <td class="dates-info">Apr 13–17, 2026</td>
       </tr>
-      <tr data-field="hci">
+      <tr data-field="hci" data-deadline="2026-03-31">
         <td class="conf-name">
           <a href="https://uist.acm.org/2026/" target="_blank">UIST 2026</a>
           <span class="conf-full-name">ACM Symposium on User Interface Software and Technology</span>
@@ -360,7 +382,7 @@ nav: false
         </td>
         <td class="dates-info">Nov 02–05, 2026</td>
       </tr>
-      <tr data-field="hci">
+      <tr data-field="hci" data-deadline="2026-04-01">
         <td class="conf-name">
           <a href="https://cscw.acm.org/" target="_blank">CSCW 2026</a>
           <span class="conf-full-name">ACM Conference on Computer-Supported Cooperative Work</span>
@@ -372,7 +394,7 @@ nav: false
         </td>
         <td class="dates-info">Nov 2026</td>
       </tr>
-      <tr data-field="hci">
+      <tr data-field="hci" data-deadline="2025-09-30">
         <td class="conf-name">
           <a href="https://humanrobotinteraction.org/2026/" target="_blank">HRI 2026</a>
           <span class="conf-full-name">IEEE/ACM International Conference on Human-Robot Interaction</span>
@@ -387,7 +409,7 @@ nav: false
       </tr>
       
       <!-- Ubiquitous & Pervasive Computing -->
-      <tr data-field="ubi">
+      <tr data-field="ubi" data-deadline="2026-05-15">
         <td class="conf-name">
           <a href="https://ubicomp.org/" target="_blank">UbiComp 2026</a>
           <span class="conf-full-name">ACM International Joint Conference on Pervasive and Ubiquitous Computing</span>
@@ -399,7 +421,7 @@ nav: false
         </td>
         <td class="dates-info">Oct 2026</td>
       </tr>
-      <tr data-field="ubi">
+      <tr data-field="ubi" data-deadline="2025-10-03">
         <td class="conf-name">
           <a href="https://percom.org/" target="_blank">PerCom 2026</a>
           <span class="conf-full-name">IEEE International Conference on Pervasive Computing and Communications</span>
@@ -412,7 +434,7 @@ nav: false
         </td>
         <td class="dates-info">Mar 16–20, 2026</td>
       </tr>
-      <tr data-field="ubi">
+      <tr data-field="ubi" data-deadline="2026-06-15">
         <td class="conf-name">
           <a href="https://sensys.acm.org/" target="_blank">SenSys 2026</a>
           <span class="conf-full-name">ACM Conference on Embedded Networked Sensor Systems</span>
@@ -424,7 +446,7 @@ nav: false
         </td>
         <td class="dates-info">Nov 2026</td>
       </tr>
-      <tr data-field="ubi">
+      <tr data-field="ubi" data-deadline="2025-12-15">
         <td class="conf-name">
           <a href="https://sigmobile.org/mobisys/" target="_blank">MobiSys 2026</a>
           <span class="conf-full-name">ACM International Conference on Mobile Systems, Applications, and Services</span>
@@ -432,13 +454,13 @@ nav: false
         <td><span class="field-tag field-ubi">Ubicomp</span></td>
         <td class="venue-info">TBD</td>
         <td class="deadline-info">
-          <span class="deadline-projected">Paper: Dec 2025</span>
+          <span class="paper">Paper: Dec 15, 2025</span>
         </td>
         <td class="dates-info">Jun 2026</td>
       </tr>
       
       <!-- Robotics -->
-      <tr data-field="rob">
+      <tr data-field="rob" data-deadline="2025-09-15">
         <td class="conf-name">
           <a href="https://2026.ieee-icra.org/" target="_blank">ICRA 2026</a>
           <span class="conf-full-name">IEEE International Conference on Robotics and Automation</span>
@@ -450,7 +472,7 @@ nav: false
         </td>
         <td class="dates-info">Jun 01–05, 2026</td>
       </tr>
-      <tr data-field="rob">
+      <tr data-field="rob" data-deadline="2026-03-02">
         <td class="conf-name">
           <a href="https://2026.ieee-iros.org/" target="_blank">IROS 2026</a>
           <span class="conf-full-name">IEEE/RSJ International Conference on Intelligent Robots and Systems</span>
@@ -462,7 +484,7 @@ nav: false
         </td>
         <td class="dates-info">Sep 27–Oct 01, 2026</td>
       </tr>
-      <tr data-field="rob">
+      <tr data-field="rob" data-deadline="2026-01-30">
         <td class="conf-name">
           <a href="https://roboticsconference.org" target="_blank">RSS 2026</a>
           <span class="conf-full-name">Robotics: Science and Systems</span>
@@ -475,7 +497,7 @@ nav: false
         </td>
         <td class="dates-info">Jul 13–17, 2026</td>
       </tr>
-      <tr data-field="rob">
+      <tr data-field="rob" data-deadline="2026-06-15">
         <td class="conf-name">
           <a href="https://www.corl.org/" target="_blank">CoRL 2026</a>
           <span class="conf-full-name">Conference on Robot Learning</span>
@@ -492,7 +514,7 @@ nav: false
 </div>
 
 <p class="last-updated">
-  <i class="fa-solid fa-info-circle"></i> Deadlines prefixed with ~ are projected based on historical patterns. Please verify on official conference websites. Last updated: January 2026.
+  <i class="fa-solid fa-info-circle"></i> Deadlines prefixed with ~ are projected based on historical patterns. Please verify on official conference websites. Last updated: February 2026.
 </p>
 
 <script>
@@ -511,5 +533,33 @@ function filterConferences() {
     row.style.display = fieldMatch && searchMatch ? '' : 'none';
   });
 }
+
+// Auto-classify rows as passed/upcoming based on deadline dates
+function classifyDeadlines() {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const rows = document.querySelectorAll('#conference-table tbody tr[data-deadline]');
+  
+  rows.forEach(row => {
+    const deadlineStr = row.getAttribute('data-deadline');
+    if (!deadlineStr) return;
+    
+    const deadline = new Date(deadlineStr);
+    deadline.setHours(0, 0, 0, 0);
+    
+    // Remove existing classes
+    row.classList.remove('deadline-passed', 'deadline-upcoming');
+    
+    // Add appropriate class
+    if (deadline < today) {
+      row.classList.add('deadline-passed');
+    } else {
+      row.classList.add('deadline-upcoming');
+    }
+  });
+}
+
+// Run classification on page load
+document.addEventListener('DOMContentLoaded', classifyDeadlines);
 </script>
 
