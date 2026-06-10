@@ -1,0 +1,8 @@
+<div class="research-services">
+  {% for group in site.data.research_services %}
+    <div class="mb-1">
+      <strong>{{ group.category }}:</strong>
+      <span class="text-muted">{% for venue in group.venues %}{% if venue.full_name %}<span title="{{ venue.full_name }}">{{ venue.name }}</span>{% else %}{{ venue.name }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+    </div>
+  {% endfor %}
+</div>

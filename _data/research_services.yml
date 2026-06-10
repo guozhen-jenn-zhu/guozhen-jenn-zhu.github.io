@@ -1,0 +1,17 @@
+- category: Conferences
+  venues:
+    - name: ICML
+      full_name: International Conference on Machine Learning
+    - name: NeurIPS
+      full_name: Conference on Neural Information Processing Systems
+
+- category: Journals
+  venues:
+    - name: IEEE TMC
+      full_name: IEEE Transactions on Mobile Computing
+    - name: IEEE IoTJ
+      full_name: IEEE Internet of Things Journal
+    - name: ACM TIOT
+      full_name: ACM Transactions on Internet of Things
+    - name: ACM IMWUT
+      full_name: "ACM Interactive, Mobile, Wearable and Ubiquitous Technologies (Proc. UbiComp)"

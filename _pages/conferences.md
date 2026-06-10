@@ -204,69 +204,6 @@ nav: false
       </tr>
     </thead>
     <tbody>
-      <tr data-field="hci" data-deadline="2025-09-11" data-conf-date="2026-04-13">
-        <td class="conf-name">
-          <a href="https://chi2026.acm.org" target="_blank">CHI 2026</a>
-          <span class="conf-full-name">ACM Conference on Human Factors in Computing Systems</span>
-        </td>
-        <td><span class="field-tag field-hci">HCI</span></td>
-        <td class="venue-info">Barcelona, Spain</td>
-        <td class="deadline-info">
-          <span class="abstract">Abstract: Sep 04, 2025</span><br>
-          <span class="paper">Paper: Sep 11, 2025</span>
-        </td>
-        <td class="dates-info">Apr 13–17, 2026</td>
-      </tr>
-      <tr data-field="ai" data-deadline="2025-09-24" data-conf-date="2026-04-23">
-        <td class="conf-name">
-          <a href="https://iclr.cc/Conferences/2026" target="_blank">ICLR 2026</a>
-          <span class="conf-full-name">International Conference on Learning Representations</span>
-        </td>
-        <td><span class="field-tag field-ai">AI/ML</span></td>
-        <td class="venue-info">Rio de Janeiro, Brazil</td>
-        <td class="deadline-info">
-          <span class="abstract">Abstract: Sep 19, 2025</span><br>
-          <span class="paper">Paper: Sep 24, 2025</span>
-        </td>
-        <td class="dates-info">Apr 23–27, 2026</td>
-      </tr>
-      <tr data-field="ubi" data-deadline="2025-10-15" data-conf-date="2026-05-11">
-        <td class="conf-name">
-          <a href="https://sensys.acm.org/2026/" target="_blank">SenSys 2026</a>
-          <span class="conf-full-name">ACM/IEEE Conference on Embedded AI and Sensing Systems (CPS-IoT Week)</span>
-        </td>
-        <td><span class="field-tag field-ubi">Ubicomp</span></td>
-        <td class="venue-info">Saint-Malo, France</td>
-        <td class="deadline-info">
-          <span class="paper">Paper: deadline passed</span>
-        </td>
-        <td class="dates-info">May 11–14, 2026</td>
-      </tr>
-      <tr data-field="rob" data-deadline="2025-09-15" data-conf-date="2026-06-01">
-        <td class="conf-name">
-          <a href="https://2026.ieee-icra.org/" target="_blank">ICRA 2026</a>
-          <span class="conf-full-name">IEEE International Conference on Robotics and Automation</span>
-        </td>
-        <td><span class="field-tag field-rob">Robotics</span></td>
-        <td class="venue-info">Vienna, Austria</td>
-        <td class="deadline-info">
-          <span class="paper">Paper: Sep 15, 2025</span>
-        </td>
-        <td class="dates-info">Jun 01–05, 2026</td>
-      </tr>
-      <tr data-field="cv" data-deadline="2025-11-13" data-conf-date="2026-06-03">
-        <td class="conf-name">
-          <a href="https://cvpr.thecvf.com/Conferences/2026" target="_blank">CVPR 2026</a>
-          <span class="conf-full-name">IEEE/CVF Conference on Computer Vision and Pattern Recognition</span>
-        </td>
-        <td><span class="field-tag field-cv">CV</span></td>
-        <td class="venue-info">Denver, CO, USA</td>
-        <td class="deadline-info">
-          <span class="abstract">Abstract: Nov 07, 2025</span><br>
-          <span class="paper">Paper: Nov 13, 2025</span>
-        </td>
-        <td class="dates-info">Jun 03–07, 2026</td>
-      </tr>
       <tr data-field="ubi" data-deadline="2025-12-05" data-conf-date="2026-06-21">
         <td class="conf-name">
           <a href="https://www.sigmobile.org/mobisys/2026/" target="_blank">MobiSys 2026</a>
@@ -406,7 +343,33 @@ nav: false
         </td>
         <td class="dates-info">Oct 13–15, 2026</td>
       </tr>
-      <tr data-field="hci" data-deadline="2026-03-31" data-conf-date="2026-11-02">
+      <tr data-field="ai" data-deadline="2026-08-02" data-conf-date="2026-10-24">
+        <td class="conf-name">
+          <a href="https://2026.emnlp.org/" target="_blank">EMNLP 2026</a>
+          <span class="conf-full-name">Conference on Empirical Methods in Natural Language Processing</span>
+        </td>
+        <td><span class="field-tag field-ai">AI/ML</span></td>
+        <td class="venue-info">Budapest, Hungary</td>
+        <td class="deadline-info">
+          <span class="abstract">ARR Submission: May 25, 2026</span><br>
+          <span class="paper">Commitment: Aug 02, 2026</span>
+        </td>
+        <td class="dates-info">Oct 24–29, 2026</td>
+      </tr>
+      <tr data-field="ubi" data-deadline="2026-06-29" data-conf-date="2026-10-26">
+        <td class="conf-name">
+          <a href="https://www.sigmobile.org/mobicom/2026/" target="_blank">MobiCom 2026</a>
+          <span class="conf-full-name">ACM International Conference on Mobile Computing and Networking</span>
+        </td>
+        <td><span class="field-tag field-ubi">Ubicomp</span></td>
+        <td class="venue-info">Austin, TX, USA</td>
+        <td class="deadline-info">
+          <span class="abstract">Paper: Mar 13, 2026 (passed)</span><br>
+          <span class="paper">Posters: Jun 29, 2026</span>
+        </td>
+        <td class="dates-info">Oct 26–30, 2026</td>
+      </tr>
+      <tr data-field="hci" data-deadline="2026-07-10" data-conf-date="2026-11-02">
         <td class="conf-name">
           <a href="https://uist.acm.org/2026/" target="_blank">UIST 2026</a>
           <span class="conf-full-name">ACM Symposium on User Interface Software and Technology</span>
@@ -414,9 +377,8 @@ nav: false
         <td><span class="field-tag field-hci">HCI</span></td>
         <td class="venue-info">Detroit, MI, USA</td>
         <td class="deadline-info">
-          <span class="abstract">Abstract: Mar 24, 2026</span><br>
-          <span class="paper">Paper: Mar 31, 2026</span><br>
-          <span class="abstract">Poster/Demo: Jul 10, 2026</span>
+          <span class="abstract">Paper: Mar 31, 2026 (passed)</span><br>
+          <span class="paper">Posters/Demos: Jul 10, 2026</span>
         </td>
         <td class="dates-info">Nov 02–05, 2026</td>
       </tr>
@@ -444,7 +406,7 @@ nav: false
         </td>
         <td class="dates-info">Nov 12–15, 2026</td>
       </tr>
-      <tr data-field="dm" data-deadline="2026-09-01" data-conf-date="2026-11-19">
+      <tr data-field="dm" data-deadline="2026-04-17" data-conf-date="2026-11-19">
         <td class="conf-name">
           <a href="https://www.siam.org/conferences-events/siam-conferences/sdm26/" target="_blank">SDM 2026</a>
           <span class="conf-full-name">SIAM International Conference on Data Mining</span>
@@ -452,7 +414,8 @@ nav: false
         <td><span class="field-tag field-dm">Data Mining</span></td>
         <td class="venue-info">Salt Lake City, UT, USA</td>
         <td class="deadline-info">
-          <span class="deadline-projected">Paper: TBD</span>
+          <span class="abstract">Abstract: Apr 10, 2026</span><br>
+          <span class="paper">Paper: Apr 17, 2026</span>
         </td>
         <td class="dates-info">Nov 19–20, 2026</td>
       </tr>
@@ -469,7 +432,20 @@ nav: false
         </td>
         <td class="dates-info">Dec 06–12, 2026</td>
       </tr>
-      <tr data-field="ai" data-deadline="2026-08-15" data-conf-date="2027-02-16">
+      <tr data-field="dm" data-deadline="2026-08-24" data-conf-date="2027-02-15">
+        <td class="conf-name">
+          <a href="https://wsdm-conference.org/2027/" target="_blank">WSDM 2027</a>
+          <span class="conf-full-name">ACM International Conference on Web Search and Data Mining</span>
+        </td>
+        <td><span class="field-tag field-dm">Data Mining</span></td>
+        <td class="venue-info">Hong Kong</td>
+        <td class="deadline-info">
+          <span class="abstract">Abstract: Aug 17, 2026</span><br>
+          <span class="paper">Paper: Aug 24, 2026</span>
+        </td>
+        <td class="dates-info">Feb 15–19, 2027</td>
+      </tr>
+      <tr data-field="ai" data-deadline="2026-07-28" data-conf-date="2027-02-16">
         <td class="conf-name">
           <a href="https://aaai.org/conference/aaai/aaai-27/" target="_blank">AAAI 2027</a>
           <span class="conf-full-name">AAAI Conference on Artificial Intelligence</span>
@@ -477,9 +453,35 @@ nav: false
         <td><span class="field-tag field-ai">AI/ML</span></td>
         <td class="venue-info">Montréal, Canada</td>
         <td class="deadline-info">
-          <span class="deadline-projected">Paper: Aug 2026</span>
+          <span class="abstract">Abstract: Jul 21, 2026</span><br>
+          <span class="paper">Paper: Jul 28, 2026</span>
         </td>
         <td class="dates-info">Feb 16–23, 2027</td>
+      </tr>
+      <tr data-field="ubi" data-deadline="2026-09-11" data-conf-date="2027-03-08">
+        <td class="conf-name">
+          <a href="https://percom.org/" target="_blank">PerCom 2027</a>
+          <span class="conf-full-name">IEEE International Conference on Pervasive Computing and Communications</span>
+        </td>
+        <td><span class="field-tag field-ubi">Ubicomp</span></td>
+        <td class="venue-info">Goa, India</td>
+        <td class="deadline-info">
+          <span class="abstract">Registration: Sep 04, 2026</span><br>
+          <span class="paper">Paper: Sep 11, 2026</span>
+        </td>
+        <td class="dates-info">Mar 08–12, 2027</td>
+      </tr>
+      <tr data-field="hci" data-deadline="2026-09-10" data-conf-date="2027-05-10">
+        <td class="conf-name">
+          <a href="https://chi2027.acm.org/" target="_blank">CHI 2027</a>
+          <span class="conf-full-name">ACM Conference on Human Factors in Computing Systems</span>
+        </td>
+        <td><span class="field-tag field-hci">HCI</span></td>
+        <td class="venue-info">Pittsburgh, PA, USA</td>
+        <td class="deadline-info">
+          <span class="paper">Paper: Sep 10, 2026</span>
+        </td>
+        <td class="dates-info">May 10–14, 2027</td>
       </tr>
       <tr data-field="rob" data-deadline="2026-09-15" data-conf-date="2027-05-24">
         <td class="conf-name">
@@ -487,21 +489,33 @@ nav: false
           <span class="conf-full-name">IEEE International Conference on Robotics and Automation</span>
         </td>
         <td><span class="field-tag field-rob">Robotics</span></td>
-        <td class="venue-info">Seoul, South Korea</td>
+        <td class="venue-info">COEX, Seoul, South Korea</td>
         <td class="deadline-info">
-          <span class="deadline-projected">Paper: Sep 2026</span>
+          <span class="deadline-projected">Paper: Sep 2026 (TBA)</span>
         </td>
         <td class="dates-info">May 24–28, 2027</td>
       </tr>
-      <tr data-field="cv" data-deadline="2027-03-15" data-conf-date="2027-10-15">
+      <tr data-field="cv" data-deadline="2026-11-13" data-conf-date="2027-06-19">
+        <td class="conf-name">
+          <a href="https://cvpr.thecvf.com/Conferences/2027" target="_blank">CVPR 2027</a>
+          <span class="conf-full-name">IEEE/CVF Conference on Computer Vision and Pattern Recognition</span>
+        </td>
+        <td><span class="field-tag field-cv">CV</span></td>
+        <td class="venue-info">Seattle, WA, USA</td>
+        <td class="deadline-info">
+          <span class="deadline-projected">Paper: Nov 2026 (TBA)</span>
+        </td>
+        <td class="dates-info">Jun 19–26, 2027</td>
+      </tr>
+      <tr data-field="cv" data-deadline="2027-03-07" data-conf-date="2027-10-15">
         <td class="conf-name">
           <a href="https://iccv.thecvf.com/" target="_blank">ICCV 2027</a>
           <span class="conf-full-name">International Conference on Computer Vision</span>
         </td>
         <td><span class="field-tag field-cv">CV</span></td>
-        <td class="venue-info">TBD</td>
+        <td class="venue-info">Hong Kong</td>
         <td class="deadline-info">
-          <span class="deadline-projected">Paper: Mar 2027</span>
+          <span class="deadline-projected">Paper: Mar 07, 2027</span>
         </td>
         <td class="dates-info">Oct 2027</td>
       </tr>
@@ -510,7 +524,7 @@ nav: false
 </div>
 
 <p class="last-updated">
-  <i class="fa-solid fa-info-circle"></i> Deadlines prefixed with ~ are projected based on historical patterns. Please verify on official conference websites. Last updated: April 2026.
+  <i class="fa-solid fa-info-circle"></i> Deadlines prefixed with ~ are projected based on historical patterns. Please verify on official conference websites. Last updated: June 2026.
 </p>
 
 <script>

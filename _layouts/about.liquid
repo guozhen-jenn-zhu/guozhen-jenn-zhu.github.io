@@ -78,6 +78,14 @@ layout: default
       {% include industry_impact.liquid %}
     {% endif %}
 
+    <!-- Research Services -->
+    {% if page.research_services and page.research_services.enabled %}
+      <hr style="border: none; height: 1px; background-color: #e0e0e0; margin: 2rem 0;">
+      <h2>Research Services</h2>
+      <p class="text-muted mb-2">Reviewer for:</p>
+      {% include research_services.liquid %}
+    {% endif %}
+
     <!-- Social -->
     {% if page.social %}
       <div class="social">

@@ -97,6 +97,24 @@
   domain: "Healthcare & wellbeing"
   url: "https://patents.google.com/patent/US20250139738A1/en"
 
+- title: "Wireless sensing using a foundation model"
+  authors: "Guozhen Zhu, Yuqian Hu, Beibei Wang, Muhammed Zahid Ozturk, Sakila Jayaweera, Wei-Hsiang Wang, Weihang Gao, Jiaxuan Zhang, K. J. Ray Liu, Oscar C. L. Au"
+  number: "19/260,558"
+  type: "U.S. Patent App."
+  status: "Pending"
+  year: 2025
+  domain: "Core wireless sensing & learning"
+  url: "https://patents.google.com/patent/US20250337657A1/en"
+
+- title: "Wireless tracking"
+  authors: "Wei-Hsiang Wang, Yuqian Hu, Beibei Wang, Guozhen Zhu, K. J. Ray Liu"
+  number: "19/390,548"
+  type: "U.S. Patent App."
+  status: "Pending"
+  year: 2025
+  domain: "Localization & mapping"
+  url: "https://patents.google.com/patent/US20260075580A1/en"
+
 - title: "An intelligent wearable device for communication between deaf mute and normal person"
   authors: "Guozhen Zhu, Wenqing Zhang, Shanghua Gao, et al."
   number: "ZL201720311729.X"
