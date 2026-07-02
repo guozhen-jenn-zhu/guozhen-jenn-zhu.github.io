@@ -46,6 +46,8 @@ Research interests:
 
 * **Reasoning & interaction on top of perception:** LLMs and agents for interaction, planning, tool use, and grounded decision-making using learned representations
 
+* **Evaluation systems for physical-world AI:** benchmarks and evaluation frameworks for measuring reliability, generalization, and perceptual limits in real-world environments
+
 * **Human-centric ambient intelligence:** understanding human state, behavior, and context to enable safety, health, and spatial intelligence in real-world environments
 
 <!-- **I like cool and artistic research works but believe in those solving real-world problems.** -->
