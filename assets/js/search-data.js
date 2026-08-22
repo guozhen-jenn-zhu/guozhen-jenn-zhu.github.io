@@ -30,7 +30,14 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/conferences/";
               },
-            },{id: "post-a-post-with-image-galleries",
+            },{id: "nav-contact",
+          title: "Contact",
+          description: "Book a time on my calendar or send me a message.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/contact/";
+          },
+        },{id: "post-a-post-with-image-galleries",
       
         title: "a post with image galleries",
       
