@@ -1,0 +1,24 @@
+{% assign availability = site.contact.availability %}
+{% if availability.enabled and availability.calendars %}
+  {% assign timezone = site.contact.timezone | default: 'America/Los_Angeles' | url_encode %}
+  {% capture embed_url %}https://calendar.google.com/calendar/embed?wkst=1&mode=WEEK&showTitle=0&showPrint=0&showCalendars=0&showTabs=1&showNav=1&showDate=1&showTz=1&ctz={{ timezone }}{% endcapture %}
+  {% for calendar in availability.calendars %}
+    {% assign calendar_id = calendar.id | url_encode %}
+    {% assign calendar_color = calendar.color | replace: '#', '%23' %}
+    {% capture embed_url %}{{ embed_url }}&src={{ calendar_id }}{% if calendar.color %}&color={{ calendar_color }}{% endif %}{% endcapture %}
+  {% endfor %}
+
+  <div class="calendar-embed">
+    <div class="calendar-embed-frame">
+      <iframe
+        src="{{ embed_url }}"
+        title="Guozhen Zhu's availability"
+        width="100%"
+        height="600"
+        frameborder="0"
+        scrolling="no"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+{% endif %}

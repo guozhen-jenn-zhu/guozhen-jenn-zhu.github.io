@@ -140,6 +140,31 @@ newsletter:
   # https://loops.so/docs/forms/custom-form
 
 # -----------------------------------------------------------------------------
+# Contact page (booking + message form)
+# -----------------------------------------------------------------------------
+# See _scripts/CONTACT_SETUP.md for the Google-side setup behind these values.
+
+contact:
+  email: gzzhu@terpmail.umd.edu
+  timezone: America/Los_Angeles # IANA name, used for the availability grid
+  timezone_label: Pacific Time # how the timezone is written in page copy
+  # Google Calendar appointment schedule booking page
+  booking_url: https://calendar.app.google/LSrVeVug4B66Gdiu8
+  booking_label: Book a 30-minute meeting
+  # Google Apps Script web app /exec URL. While blank, the form falls back to
+  # opening the visitor's mail client with the message prefilled.
+  form_endpoint: https://script.google.com/macros/s/AKfycbyC7WucKotzkHAJt8Sc_nkLmEcFCtPpcE5b5RpruWVQJt5hpAcCRb5X6X0jl3X0Fyh7nA/exec
+  # Read-only free/busy grid. Each calendar must be shared publicly as
+  # "See only free/busy (hide details)" or visitors get a permissions warning.
+  availability:
+    enabled: true
+    calendars:
+      - id: gzzhu@terpmail.umd.edu
+        color: "#039BE5"
+      - id: guozhen.zhu@originwirelessai.com
+        color: "#7986CB"
+
+# -----------------------------------------------------------------------------
 # Collections
 # -----------------------------------------------------------------------------
 

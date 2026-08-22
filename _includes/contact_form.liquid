@@ -1,0 +1,85 @@
+{% assign contact_email = site.contact.email | default: 'gzzhu@terpmail.umd.edu' %}
+
+<form
+  id="contact-form"
+  class="contact-form"
+  method="post"
+  action="{{ site.contact.form_endpoint }}"
+  data-endpoint="{{ site.contact.form_endpoint }}"
+  data-fallback-email="{{ contact_email }}"
+  novalidate
+>
+  <div class="contact-form-row">
+    <div class="contact-field">
+      <label for="contact-name">Name</label>
+      <input
+        id="contact-name"
+        name="name"
+        type="text"
+        autocomplete="name"
+        placeholder="Your name"
+        aria-describedby="contact-name-error"
+        required
+      >
+      <span class="contact-field-error" id="contact-name-error"></span>
+    </div>
+
+    <div class="contact-field">
+      <label for="contact-email">Email</label>
+      <input
+        id="contact-email"
+        name="email"
+        type="email"
+        autocomplete="email"
+        placeholder="you@example.com"
+        aria-describedby="contact-email-error"
+        required
+      >
+      <span class="contact-field-error" id="contact-email-error"></span>
+    </div>
+  </div>
+
+  <div class="contact-field">
+    <label for="contact-subject">Subject <span class="contact-optional">(optional)</span></label>
+    <input id="contact-subject" name="subject" type="text" placeholder="Collaboration, invited talk, question, ...">
+  </div>
+
+  <div class="contact-field">
+    <label for="contact-message">Message</label>
+    <textarea
+      id="contact-message"
+      name="message"
+      rows="7"
+      placeholder="Hi Guozhen, ..."
+      aria-describedby="contact-message-error"
+      required
+    ></textarea>
+    <span class="contact-field-error" id="contact-message-error"></span>
+  </div>
+
+  <!-- Spam trap: hidden from people, tempting to bots. -->
+  <div class="contact-hp" aria-hidden="true">
+    <label for="contact-website">Leave this field empty</label>
+    <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
+  </div>
+  <input id="contact-elapsed" type="hidden" name="elapsed" value="0">
+
+  <div class="contact-form-actions">
+    <button type="submit" class="contact-submit">Send message</button>
+    <span class="contact-form-note">Goes straight to my inbox. I usually reply within a few days.</span>
+  </div>
+
+  <p id="contact-form-status" class="contact-form-status" role="status" aria-live="polite"></p>
+</form>
+
+<noscript>
+  <p class="contact-form-status contact-form-status-error">
+    This form needs JavaScript. You can email me directly at
+    <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>.
+  </p>
+  <style>
+    .contact-form {
+      display: none;
+    }
+  </style>
+</noscript>
