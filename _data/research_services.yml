@@ -1,5 +1,7 @@
 - category: Conferences
   venues:
+    - name: AAAI
+      full_name: AAAI Conference on Artificial Intelligence
     - name: ICML
       full_name: International Conference on Machine Learning
     - name: NeurIPS

@@ -82,8 +82,10 @@ jobs:
           bundle install
 
       - name: Install purgecss
+        # Pinned to 6.x: the 7.x CLI loads the config file but ignores its
+        # `css`/`content` keys, so the purge step silently becomes a no-op.
         run: |
-          npm install -g purgecss
+          npm install -g purgecss@6
 
       - name: Build site
         env:

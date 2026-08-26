@@ -49,11 +49,11 @@
       <!-- Show More/Show Less buttons -->
       {% if news_size > 6 %}
         <div class="text-center mt-3">
-          <button id="show-more-btn" class="btn btn-sm" onclick="toggleNews()" style="background-color: #FFFFFF; border-color: #FFFFFF; color: #ffc0cb;">
-            <i class="fas fa-chevron-down"></i> Show More ({{ news_size | minus: 6 }} more)
+          <button id="show-more-btn" class="btn btn-sm news-toggle" onclick="toggleNews()">
+            <i class="fas fa-chevron-down"></i> Show more ({{ news_size | minus: 6 }} more)
           </button>
-          <button id="show-less-btn" class="btn btn-sm" onclick="toggleNews()" style="display: none; background-color: #FFFFFF; border-color: #FFFFFF; color: #ffc0cb;">
-            <i class="fas fa-chevron-up"></i> Show Less
+          <button id="show-less-btn" class="btn btn-sm news-toggle" onclick="toggleNews()" style="display: none;">
+            <i class="fas fa-chevron-up"></i> Show less
           </button>
         </div>
       {% endif %}

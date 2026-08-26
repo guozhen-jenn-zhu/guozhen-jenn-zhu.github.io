@@ -10,7 +10,7 @@
 email: gzzhu@terpmail.umd.edu # your email address
 # facebook_id: # your facebook id
 # flickr_id: # your flickr id
-github_username: guozhen-jenn-zhu# your GitHub user name
+# github_username: # your GitHub user name (moved below so the icon renders last)
 # gitlab_username: # your GitLab user name
 # ieee_id: # your ieeexplore.ieee.org/author/id
 # inspirehep_id: # Inspire HEP author ID
@@ -23,14 +23,15 @@ github_username: guozhen-jenn-zhu# your GitHub user name
 linkedin_username: guozhen-z-45141b219 # your LinkedIn user name
 # mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 # medium_username: # your Medium username
-orcid_id: 0000-0003-2672-1810 # your ORCID ID
+# orcid_id: 0000-0003-2672-1810 # your ORCID ID
 # osf_id: # your OSF ID
 # pinterest_id: # your pinterest id
 # publons_id: # your ID on Publons
 # quora_username: # your Quora username
-research_gate_profile: Guozhen-Zhu-3 # your profile on ResearchGate
-rss_icon: true # set to true to show the RSS icon
+# research_gate_profile: Guozhen-Zhu-3 # your profile on ResearchGate
+# rss_icon: true # set to true to show the RSS icon
 scholar_userid: XXghvTMAAAAJ # your Google Scholar ID
+github_username: guozhen-jenn-zhu # your GitHub user name (placed last so its icon renders at the end)
 # scopus_id: # your profile on Scopus
 # semanticscholar_id: # your Semantic Scholar ID
 # spotify_id: # your spotify id

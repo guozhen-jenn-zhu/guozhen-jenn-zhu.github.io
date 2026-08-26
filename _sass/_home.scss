@@ -1,0 +1,318 @@
+/* -------------------------------------------------------------------------
+   Home page: sticky profile sidebar + inline section helpers
+   ------------------------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section anchors sit below the fixed navbar, so give the jump targets enough
+   top margin that their headings are not hidden. */
+#about,
+#news,
+#publications,
+#patents {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Two-column layout: sticky sidebar + scrolling main content */
+.home-layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.home-main {
+  min-width: 0; // let content shrink instead of overflowing the grid
+}
+
+.home-sidebar {
+  position: sticky;
+  top: 5rem; // clear the fixed navbar
+  align-self: start;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  &__avatar {
+    width: 160px;
+    max-width: 100%;
+    margin: 0 auto 1.25rem;
+
+    figure,
+    picture {
+      display: block;
+      margin: 0;
+    }
+
+    /* Crop the (non-square) source to a square so the circle is a true circle,
+       not an ellipse. Overrides figure.liquid's width="100%" height="auto". */
+    img {
+      width: 160px;
+      height: 160px;
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  &__name {
+    margin: 0 0 0.25rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__focus {
+    margin: 0 0 0.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--global-theme-color);
+  }
+
+  &__role {
+    margin: 0 0 1.1rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--global-text-color-light);
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 0.15rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+  }
+
+  &__email {
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    word-break: break-word;
+
+    a {
+      color: var(--global-text-color);
+
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+
+  /* One grouped row: media links + CV, sized down from the footer icons */
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.2rem;
+    line-height: 1;
+
+    a {
+      color: var(--global-text-color);
+
+      i::before,
+      i {
+        transition: color 0.15s ease-in-out;
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        i::before,
+        i {
+          color: var(--global-theme-color);
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    border-top: 1px solid var(--global-divider-color);
+  }
+
+  &__nav-link {
+    padding: 0.32rem 0;
+    font-size: 0.95rem;
+    color: var(--global-text-color-light);
+    transition: color 0.15s ease;
+
+    &:hover,
+    &:focus {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+
+    &.is-active {
+      color: var(--global-theme-color);
+      font-weight: 600;
+    }
+
+    &--ext::after {
+      content: "\2197"; // north-east arrow: signals an off-page link
+      margin-left: 0.25rem;
+      font-size: 0.8em;
+      opacity: 0.65;
+    }
+  }
+}
+
+/* Stack the sidebar on top on narrow screens */
+@media (max-width: 768px) {
+  .home-layout {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .home-sidebar {
+    position: static;
+    max-width: 34rem;
+    margin: 0 auto;
+
+    &__card {
+      align-items: center;
+      text-align: center;
+    }
+
+    &__links {
+      justify-content: center;
+    }
+
+    /* On phones the top navbar already covers navigation and every section is
+       right below, so hide the in-page section nav to keep the header compact. */
+    &__nav {
+      display: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Intro block (About) sits flush at the top of the main column */
+.home-intro > :first-child {
+  margin-top: 0;
+}
+
+/* Airy home sections: rely on whitespace + subtle headings instead of rules */
+.home-section {
+  margin-top: 4.5rem;
+
+  &__title {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__lead {
+    margin-top: -0.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+@media (max-width: 576px) {
+  .home-section {
+    margin-top: 3rem;
+  }
+}
+
+/* Clean, minimal "Show more / less" toggle for the news list */
+.news-toggle {
+  background-color: transparent;
+  border: none;
+  color: var(--global-theme-color);
+  font-weight: 500;
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: var(--global-theme-color);
+    text-decoration: underline;
+    box-shadow: none;
+  }
+}
+
+/* "All publications / patents ->" link under a home section */
+.home-viewall {
+  margin-top: 1rem;
+  font-weight: 500;
+
+  a {
+    color: var(--global-theme-color);
+  }
+}
+
+/* Closing contact note at the foot of the main column */
+.home-contact-note {
+  margin-top: 4.5rem;
+  color: var(--global-text-color-light);
+  font-size: 0.95rem;
+}
+
+/* Compact selected-patents list on the home page */
+.home-patents {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    line-height: 1.4;
+
+    a {
+      color: var(--global-text-color);
+
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+
+  &__meta {
+    margin-top: 0.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+
+  &__domain {
+    font-style: italic;
+  }
+}

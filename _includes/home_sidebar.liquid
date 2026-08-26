@@ -1,0 +1,92 @@
+{%- comment -%}
+  Sticky profile sidebar for the home page (inspired by binghao-huang.github.io):
+  photo, name, focus + role, email, one grouped row of media links + CV, and a
+  vertical section nav with scroll-spy. Tools and Contact link out to their own
+  pages. Degrades gracefully without JS (nav links are plain anchors).
+{%- endcomment -%}
+
+<aside class="home-sidebar">
+  <div class="home-sidebar__card">
+    {%- if page.profile.image -%}
+      {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
+      {%- if page.profile.image_circular -%}
+        {%- assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' -%}
+      {%- else -%}
+        {%- assign profile_image_class = 'img-fluid z-depth-1 rounded' -%}
+      {%- endif -%}
+      <div class="home-sidebar__avatar">
+        {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes="220px" alt=page.profile.image cache_bust=true %}
+      </div>
+    {%- endif -%}
+
+    <h1 class="home-sidebar__name">
+      {%- if site.title == 'blank' -%}
+        {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}
+      {%- else -%}
+        {{ site.title }}
+      {%- endif -%}
+    </h1>
+    {%- if page.focus %}<p class="home-sidebar__focus">{{ page.focus }}</p>{%- endif -%}
+    {%- if page.subtitle %}<p class="home-sidebar__role">{{ page.subtitle }}</p>{%- endif -%}
+
+    {%- assign email = site.data.socials.email -%}
+    {%- if email -%}
+      <div class="home-sidebar__email">
+        <span class="home-sidebar__label">Email</span>
+        <a href="mailto:{{ email | encode_email }}">{{ email | replace: '@', ' [at] ' }}</a>
+      </div>
+    {%- endif -%}
+
+    <div class="home-sidebar__links contact-icons">
+      {% include social.liquid %}
+      {%- if page.cv_url -%}
+        <a href="{{ page.cv_url }}" target="_blank" rel="noopener noreferrer" title="Curriculum Vitae (CV)">
+          <i class="ai ai-cv"></i>
+        </a>
+      {%- endif -%}
+    </div>
+
+    <nav class="home-sidebar__nav" aria-label="Sections">
+      <a class="home-sidebar__nav-link" href="#about">About</a>
+      <a class="home-sidebar__nav-link" href="#news">News</a>
+      <a class="home-sidebar__nav-link" href="#publications">Publications</a>
+      <a class="home-sidebar__nav-link" href="#patents">Patents</a>
+      <a class="home-sidebar__nav-link home-sidebar__nav-link--ext" href="{{ '/tools/' | relative_url }}">Tools</a>
+      <a class="home-sidebar__nav-link home-sidebar__nav-link--ext" href="{{ '/contact/' | relative_url }}">Contact</a>
+    </nav>
+  </div>
+</aside>
+
+<script>
+  (function () {
+    var nav = document.querySelector(".home-sidebar__nav");
+    if (!nav || !("IntersectionObserver" in window)) return;
+
+    var map = {};
+    var sections = [];
+    Array.prototype.forEach.call(nav.querySelectorAll('a[href^="#"]'), function (link) {
+      var section = document.getElementById(link.getAttribute("href").slice(1));
+      if (section) {
+        map[section.id] = link;
+        sections.push(section);
+      }
+    });
+    if (!sections.length) return;
+
+    var current = null;
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) current = entry.target.id;
+        });
+        Object.keys(map).forEach(function (id) {
+          map[id].classList.toggle("is-active", id === current);
+        });
+      },
+      { rootMargin: "-30% 0px -55% 0px", threshold: 0 }
+    );
+    sections.forEach(function (section) {
+      observer.observe(section);
+    });
+  })();
+</script>

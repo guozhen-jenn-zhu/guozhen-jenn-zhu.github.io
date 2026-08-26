@@ -1,0 +1,33 @@
+{%- comment -%}
+  Compact "selected patents" list for the home page. Shows granted patents
+  first (most recent first), capped at `page.patents.limit`, and links out to
+  the full /patents/ page. Data source: _data/patents.yml.
+{%- endcomment -%}
+
+{%- assign granted = site.data.patents | where: "status", "Granted" | sort: "year" | reverse -%}
+{%- if page.patents.limit -%}
+  {%- assign shown = granted | slice: 0, page.patents.limit -%}
+{%- else -%}
+  {%- assign shown = granted -%}
+{%- endif -%}
+
+<div class="home-patents">
+  <ol class="home-patents__list">
+    {%- for patent in shown -%}
+      <li class="home-patents__item">
+        <div class="home-patents__title">
+          {%- if patent.url -%}
+            <a href="{{ patent.url }}" target="_blank" rel="noopener noreferrer">{{ patent.title }}</a>
+          {%- else -%}
+            {{ patent.title }}
+          {%- endif -%}
+        </div>
+        <div class="home-patents__meta">
+          <span class="home-patents__number">{{ patent.type }} {{ patent.number }}</span>
+          <span class="home-patents__year">{{ patent.year }}</span>
+          {%- if patent.domain %}<span class="home-patents__domain">{{ patent.domain }}</span>{%- endif -%}
+        </div>
+      </li>
+    {%- endfor -%}
+  </ol>
+</div>
