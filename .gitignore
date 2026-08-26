@@ -1,0 +1,22 @@
+# Jekyll build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby / Bundler (installed locally; CI runs `bundle install`)
+.bundle/
+vendor/
+
+# Node (installed locally; CI installs its own tooling)
+node_modules/
+
+# Python virtualenv (local nbconvert toolchain for Jupyter posts)
+.venv/
+
+# Plugin caches (regenerated at build time)
+.tweet-cache/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
