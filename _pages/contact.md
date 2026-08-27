@@ -66,15 +66,21 @@ contact_form: true
   gap: 0.6rem;
 }
 
-.booking-fallback {
-  font-size: 0.8rem;
-  color: var(--global-text-color-light);
-  border-bottom: 1px dashed var(--global-divider-color);
+.booking-button {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  background: var(--global-theme-color);
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
 }
 
-.booking-fallback:hover {
-  color: var(--global-theme-color);
-  border-bottom-color: var(--global-theme-color);
+.booking-button:hover {
+  opacity: 0.88;
+  color: #ffffff;
 }
 
 /* Availability grid. Google only serves a light iframe, so in dark mode it is
@@ -258,10 +264,20 @@ html[data-theme="dark"] .contact-field-error {
 
 <p class="contact-intro">
 I am always glad to talk about research collaborations in ambient intelligence, foundation models for perception,
-and multimodal or temporal learning, as well as invited talks and mentoring. The quickest way to reach me is to grab a
-slot below; otherwise, drop me a note and I will get back to you. I read every message I receive, though replies are
-sometimes delayed by a few days. If you have not heard back within a week, please feel free to ping me again.
+and multimodal or temporal learning, as well as invited talks and mentoring. Drop me a note using the form below and
+I will get back to you, or, if you would rather talk live, book a time on my calendar further down. I read every
+message I receive, though replies are sometimes delayed by a few days. If you have not heard back within a week,
+please feel free to ping me again.
 </p>
+
+<div class="contact-section">
+  <h2>Send a message</h2>
+  <p class="contact-section-note">
+    For anything that does not need a meeting. Your message lands in my inbox at
+    <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>, and I will reply to the address you leave here.
+  </p>
+  {% include contact_form.liquid %}
+</div>
 
 <div class="contact-section">
   <h2>Schedule a meeting</h2>
@@ -277,24 +293,8 @@ sometimes delayed by a few days. If you have not heard back within a week, pleas
       <p>Pick any open slot that suits you. Add a short note about what you would like to discuss when you book.</p>
     </div>
     <div class="booking-actions">
-      <!-- Google Calendar appointment scheduling button -->
-      <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-      <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-      <script>
-        (function () {
-          var target = document.currentScript;
-          window.addEventListener('load', function () {
-            calendar.schedulingButton.load({
-              url: '{{ site.contact.booking_url }}?gv=true',
-              color: '#b509ac',
-              label: '{{ site.contact.booking_label }}',
-              target: target,
-            });
-          });
-        })();
-      </script>
-      <a class="booking-fallback" href="{{ site.contact.booking_url }}" target="_blank" rel="noopener noreferrer">
-        or open the booking page in a new tab
+      <a class="booking-button" href="{{ site.contact.booking_url }}" target="_blank" rel="noopener noreferrer">
+        {{ site.contact.booking_label }}
       </a>
     </div>
   </div>
@@ -312,12 +312,3 @@ sometimes delayed by a few days. If you have not heard back within a week, pleas
   {% include calendar_embed.liquid %}
 </div>
 {% endif %}
-
-<div class="contact-section">
-  <h2>Send a message</h2>
-  <p class="contact-section-note">
-    For anything that does not need a meeting. Your message lands in my inbox at
-    <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>, and I will reply to the address you leave here.
-  </p>
-  {% include contact_form.liquid %}
-</div>
