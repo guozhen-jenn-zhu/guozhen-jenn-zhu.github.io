@@ -212,8 +212,8 @@ nav: false
         <td><span class="field-tag field-dm">Data Mining</span></td>
         <td class="venue-info">Hong Kong</td>
         <td class="deadline-info">
-          <span class="paper">Full Paper: Aug 24, 2026</span><br>
-          <span class="abstract">Short Paper: Nov 17, 2026</span>
+          <span class="abstract">Abstract: Aug 17, 2026</span><br>
+          <span class="paper">Full Paper: Aug 24, 2026</span>
         </td>
         <td class="dates-info">Feb 15–19, 2027</td>
       </tr>
@@ -225,7 +225,7 @@ nav: false
         <td><span class="field-tag field-cv">CV</span></td>
         <td class="venue-info">Orlando, FL, USA</td>
         <td class="deadline-info">
-          <span class="abstract">Round 2 Abstract: Aug 21, 2026</span><br>
+          <span class="abstract">Round 2 Registration: Aug 21, 2026</span><br>
           <span class="paper">Round 2 Paper: Aug 28, 2026</span>
         </td>
         <td class="dates-info">Jan 04–08, 2027</td>
@@ -287,7 +287,7 @@ nav: false
           <span class="conf-full-name">International Conference on Learning Representations</span>
         </td>
         <td><span class="field-tag field-ai">AI/ML</span></td>
-        <td class="venue-info">San Francisco, CA, USA</td>
+        <td class="venue-info">West Coast, USA (TBA)</td>
         <td class="deadline-info">
           <span class="abstract">Abstract: Sep 18, 2026</span><br>
           <span class="paper">Paper: Sep 25, 2026</span>
@@ -318,7 +318,7 @@ nav: false
         </td>
         <td class="dates-info">Jun 01–05, 2027</td>
       </tr>
-      <tr data-field="dm" data-deadline="2026-10-18" data-conf-date="2027-05-10">
+      <tr data-field="dm" data-deadline="2026-10-25" data-conf-date="2027-05-10">
         <td class="conf-name">
           <a href="https://acmweb2027.org/" target="_blank">WWW 2027</a>
           <span class="conf-full-name">ACM Web Conference</span>
@@ -326,8 +326,8 @@ nav: false
         <td><span class="field-tag field-dm">Data Mining</span></td>
         <td class="venue-info">Dublin, Ireland</td>
         <td class="deadline-info">
-          <span class="abstract">Abstract: Oct 11, 2026</span><br>
-          <span class="paper">Paper: Oct 18, 2026</span>
+          <span class="abstract">Abstract: Oct 18, 2026</span><br>
+          <span class="paper">Paper: Oct 25, 2026</span>
         </td>
         <td class="dates-info">May 10–14, 2027</td>
       </tr>
@@ -394,18 +394,18 @@ nav: false
         </td>
         <td class="dates-info">Aug 17–22, 2027</td>
       </tr>
-      <tr data-field="ai" data-deadline="2027-01-19" data-conf-date="2027-08-01">
+      <tr data-field="ai" data-deadline="2027-01-19" data-conf-date="2027-08-07">
         <td class="conf-name">
           <a href="https://www.ijcai.org/" target="_blank">IJCAI 2027</a>
           <span class="conf-full-name">International Joint Conference on Artificial Intelligence</span>
         </td>
         <td><span class="field-tag field-ai">AI/ML</span></td>
-        <td class="venue-info">TBA</td>
+        <td class="venue-info">Kyoto, Japan</td>
         <td class="deadline-info">
           <span class="deadline-projected">Abstract: Jan 2027</span><br>
           <span class="deadline-projected">Paper: Jan 2027</span>
         </td>
-        <td class="dates-info">Aug 2027 (TBA)</td>
+        <td class="dates-info">Aug 07–13, 2027</td>
       </tr>
       <tr data-field="dm" data-deadline="2027-01-22" data-conf-date="2027-07-25">
         <td class="conf-name">
@@ -426,25 +426,25 @@ nav: false
           <span class="conf-full-name">International Conference on Machine Learning</span>
         </td>
         <td><span class="field-tag field-ai">AI/ML</span></td>
-        <td class="venue-info">TBA</td>
+        <td class="venue-info">South America (TBA)</td>
         <td class="deadline-info">
           <span class="deadline-projected">Abstract: Jan 2027</span><br>
           <span class="deadline-projected">Paper: Jan 2027</span>
         </td>
         <td class="dates-info">Jul 2027 (TBA)</td>
       </tr>
-      <tr data-field="rob" data-deadline="2027-01-29" data-conf-date="2027-07-10">
+      <tr data-field="rob" data-deadline="2027-01-29" data-conf-date="2027-07-06">
         <td class="conf-name">
           <a href="https://roboticsconference.org" target="_blank">RSS 2027</a>
           <span class="conf-full-name">Robotics: Science and Systems</span>
         </td>
         <td><span class="field-tag field-rob">Robotics</span></td>
-        <td class="venue-info">TBA</td>
+        <td class="venue-info">Athens, Greece</td>
         <td class="deadline-info">
           <span class="deadline-projected">Abstract: Jan 2027</span><br>
           <span class="deadline-projected">Paper: Jan 2027</span>
         </td>
-        <td class="dates-info">Jul 2027 (TBA)</td>
+        <td class="dates-info">Jul 06–11, 2027</td>
       </tr>
       <tr data-field="dm" data-deadline="2027-02-01" data-conf-date="2027-08-01">
         <td class="conf-name">
@@ -454,8 +454,8 @@ nav: false
         <td><span class="field-tag field-dm">Data Mining</span></td>
         <td class="venue-info">San Jose, CA, USA</td>
         <td class="deadline-info">
-          <span class="deadline-projected">Cycle 2: Feb 2027</span><br>
-          <span class="abstract">Resubmissions only</span>
+          <span class="deadline-projected">Cycle 2 Paper: Feb 2027</span><br>
+          <span class="abstract">New &amp; revised papers</span>
         </td>
         <td class="dates-info">Aug 01–05, 2027</td>
       </tr>
@@ -539,25 +539,25 @@ nav: false
           <span class="conf-full-name">Conference on Neural Information Processing Systems</span>
         </td>
         <td><span class="field-tag field-ai">AI/ML</span></td>
-        <td class="venue-info">TBA</td>
+        <td class="venue-info">Europe (TBA)</td>
         <td class="deadline-info">
           <span class="deadline-projected">Abstract: May 2027</span><br>
           <span class="deadline-projected">Paper: May 2027</span>
         </td>
         <td class="dates-info">Dec 2027 (TBA)</td>
       </tr>
-      <tr data-field="dm" data-deadline="2027-05-23" data-conf-date="2027-11-07">
+      <tr data-field="dm" data-deadline="2027-05-23" data-conf-date="2027-10-25">
         <td class="conf-name">
           <a href="http://www.cikmconference.org/" target="_blank">CIKM 2027</a>
           <span class="conf-full-name">ACM International Conference on Information and Knowledge Management</span>
         </td>
         <td><span class="field-tag field-dm">Data Mining</span></td>
-        <td class="venue-info">TBA</td>
+        <td class="venue-info">Sydney, Australia</td>
         <td class="deadline-info">
           <span class="deadline-projected">Abstract: May 2027</span><br>
           <span class="deadline-projected">Paper: May 2027</span>
         </td>
-        <td class="dates-info">Nov 2027 (TBA)</td>
+        <td class="dates-info">Oct 2027 (TBA)</td>
       </tr>
       <tr data-field="ai" data-deadline="2027-05-25" data-conf-date="2027-11-01">
         <td class="conf-name">
@@ -565,7 +565,7 @@ nav: false
           <span class="conf-full-name">Conference on Empirical Methods in Natural Language Processing</span>
         </td>
         <td><span class="field-tag field-ai">AI/ML</span></td>
-        <td class="venue-info">TBA</td>
+        <td class="venue-info">Mexico / Central America (TBA)</td>
         <td class="deadline-info">
           <span class="deadline-projected">ARR Submission: May 2027</span><br>
           <span class="deadline-projected">Commitment: Aug 2027</span>
@@ -627,7 +627,7 @@ nav: false
 </div>
 
 <p class="last-updated">
-  <i class="fa-solid fa-info-circle"></i> Each venue shows its next open submission deadline; editions whose deadline has already passed are rolled forward. Deadlines prefixed with ~ are projected from historical patterns and not yet officially announced. All dates are Anywhere on Earth (AoE) — please verify on the official conference website before submitting. Last updated: August 21, 2026.
+  <i class="fa-solid fa-info-circle"></i> Each venue shows its next open submission deadline; editions whose deadline has already passed are rolled forward. Deadlines prefixed with ~ are projected from historical patterns and not yet officially announced. All dates are Anywhere on Earth (AoE) — please verify on the official conference website before submitting. Last updated: August 26, 2026.
 </p>
 
 <script>
