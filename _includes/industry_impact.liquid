@@ -1,19 +1,18 @@
 <div class="industry-impact">
-  <ul class="list-unstyled">
+  <ul class="industry-impact__list list-unstyled">
     {% for item in site.data.industry_impact %}
-      <li class="mb-3">
-        <strong>{{ item.company }}</strong>
-        {% if item.year %}
-          <span class="text-muted">({{ item.year }})</span>
-        {% endif %}
-        <br>
-        <span class="text-muted">{{ item.description }}</span>
-        {% if item.patents %}
-          <br>
-          <small class="text-muted">Based on {{ item.patents }}.</small>
-        {% endif %}
+      <li class="industry-impact__item">
+        <div class="industry-impact__head">
+          <span class="industry-impact__company">
+            <strong>{{ item.company }}</strong>
+            {% if item.year %}<span class="text-muted">({{ item.year }})</span>{% endif %}
+          </span>
+          {% if item.patents %}
+            <span class="industry-impact__patents text-muted">Based on {{ item.patents }}.</span>
+          {% endif %}
+        </div>
+        <div class="industry-impact__desc text-muted">{{ item.description }}</div>
       </li>
     {% endfor %}
   </ul>
 </div>
-
